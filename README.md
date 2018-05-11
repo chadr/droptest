@@ -2,6 +2,8 @@
 
 An R package for simulating LOX/GOX drop testing.
 
+**Note: This project is still in the development phase.**
+
 ### Installation:
 
 To get the current development version from github:
