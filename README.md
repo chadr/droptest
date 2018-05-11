@@ -4,6 +4,13 @@ An R package for simulating LOX/GOX drop testing.
 
 ### Installation:
 
+To get the current development version from github:
+
+```R
+# install.packages("devtools")
+devtools::install_github("chadr/droptest")
+```
+
 ### Getting Started:
 
 ### Examples and documentation
