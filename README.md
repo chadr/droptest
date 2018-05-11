@@ -1,8 +1,14 @@
 # droptest
 
-Simulates LOX/GOX drop testing.
+An R package for simulating LOX/GOX drop testing.
 
-Background information:
+## Installation:
+
+## Getting Started:
+
+## Examples and documentation
+
+## Background information:
 
 Drop testing -- performed by the military and NASA -- yields results
 that are difficult to analyze. Numerous tech briefs and standards have
