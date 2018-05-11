@@ -10,7 +10,7 @@ An R package for simulating LOX/GOX drop testing.
 
 ### Background information:
 
-Drop testing -- sometimes called impact testing --is used to evaluate if a
+Drop testing -- sometimes called impact testing -- is used to evaluate if a
 material will interact with liquid (LOX) or gaseous oxygen (GOX). The material
 is exposed to the LOX/GOX and an impactor is dropped onto the sample. Each drop
 is a bernoulli trial where a reaction is a failure and a non-reaction is a
