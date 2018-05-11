@@ -29,5 +29,23 @@ result values as observations.
 
 Simulation can be used to examine the behavior of this truncated test procedure.
 
+### Applicable Standards
+
+Pass/Fail criteria and number of observations required have been defined in the
+following standards:
+
+* NASA-STD-6001B
+(https://spaceflightsystems.grc.nasa.gov/SpaceDOC_II/Standards/documents/NASA-STD-6001B-1.pdf)
+* ASTM D2512 (https://www.astm.org/Standards/D2512.htm)
+* ASTM G86-17 (https://www.astm.org/Standards/G86.htm)
+
+**Note:** This package is not constrained by any standard. Arbitrary test 
+criteria and observations can be specified for maximum flexibility.
 
 ### For more information on drop testing: 
+* "An Instrument for Determination of Impact Sensitivity of Materials in Contact with 
+Liquid Oxygen" (AB6002-EB). 1960. 
+https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm
+
+* "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
+https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf
