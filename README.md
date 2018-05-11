@@ -29,6 +29,9 @@ result values as observations.
 
 Simulation can be used to examine the behavior of this truncated test procedure.
 
+Inspired by NASA Technical Note NASA-TN-D-7663 (1974):
+https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
+
 ### Applicable Standards
 
 Pass/Fail criteria and number of observations required have been defined in the

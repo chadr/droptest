@@ -3,7 +3,10 @@ Title: Simulates LOX/GOX drop testing.
 Version: 0.0.0.9000
 Authors: person("Chad", "Ross", email = "chad.ross@gmail.com",
     role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Generates simulated data representing the LOX/GOX drop testing 
+    process (Impact testing). Functions are provided to simulate trials, test
+    series, and groups of test series. Test attributes and criteria can be set
+    arbitrarily.
 Depends: R (>= 3.4.3)
 License: MIT + file LICENSE
 Encoding: UTF-8
