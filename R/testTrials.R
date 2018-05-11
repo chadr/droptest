@@ -74,9 +74,9 @@ testTrials <- function(p, observations = 20, fail.criteria = 1,
         #build list
         test.return <- list(REACTIONS = reactions,
                             NON_REACTIONS = non.reactions,
+                            P = p,
                             RESULT = ifelse(reactions >= fail.criteria,
-                                          "FAIL", "PASS"),
-                            P = p)
+                                            "FAIL", "PASS"))
       
         if (raw.data == TRUE) {
           # provide raw data if requested (not truncated)
