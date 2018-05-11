@@ -1,4 +1,4 @@
-DropTests <- function(num.tests, tag.group = FALSE, group = 0, ...) {
+testSeries <- function(num.tests, tag.group = FALSE, group = 0, ...) {
   # Completes multiple simulated drop tests. See DropTest.r for more info.
   #
   # Args:
@@ -18,7 +18,7 @@ DropTests <- function(num.tests, tag.group = FALSE, group = 0, ...) {
 
   for (i in 1:num.tests) {
     # generate a batch of drop tests
-    tests <- rbind(tests, DropTest(data.structure = "data.frame", ...))
+    tests <- rbind(tests, testTrials(data.structure = "data.frame", ...))
   }
 
   if (tag.group == TRUE) {
