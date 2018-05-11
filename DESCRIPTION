@@ -1,4 +1,4 @@
-Package: droptesting
+Package: droptest
 Title: Simulates LOX/GOX drop testing.
 Version: 0.0.0.9000
 Authors: person("Chad", "Ross", email = "chad.ross@gmail.com",
