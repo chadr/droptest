@@ -1,4 +1,4 @@
-trials <- function(p, observations = 20, fail.criteria = 1,
+trials <- function(p, max.trials = 20, fail.criteria = 1,
                    raw.data = FALSE, data.structure = "data.frame") {
     # Completes a simulated drop test.
     # 
@@ -19,7 +19,7 @@ trials <- function(p, observations = 20, fail.criteria = 1,
     k <- 1
     
     # 1 = reaction; 0 = no reaction
-    results <- rbinom(observations, k, p)
+    results <- rbinom(max.trials, k, p)
     
     # position of fail condition
     index <- which(results == 1)[fail.criteria]
@@ -27,7 +27,7 @@ trials <- function(p, observations = 20, fail.criteria = 1,
     if (is.na(index)) {
         # no reactions
         reactions <- 0
-        non.reactions <- observations
+        non.reactions <- max.trials
     } else {
         # count number of reactions and non-reactions
         reactions <- sum(results[0:index])
@@ -40,10 +40,12 @@ trials <- function(p, observations = 20, fail.criteria = 1,
     
     if (data.structure == "data.frame") {
         # build data frame
-        test.return <- data.frame(REACTIONS = reactions,
-                                  NON_REACTIONS = non.reactions,
+        test.return <- data.frame(F_CRITERIA = fail.criteria,
+                                  REACT = reactions,
+                                  NON_REACT = non.reactions,
                                   TRIALS = reactions + non.reactions,
-                                  PCT_REACTIONS = reactions / (reactions + non.reactions),
+                                  MAX_TRIALS = max.trials,
+                                  PCT_REACT = reactions / (reactions + non.reactions),
                                   P = p,
                                   RESULT = ifelse(reactions >= fail.criteria,
                                                 "FAIL", "PASS"))
@@ -56,10 +58,12 @@ trials <- function(p, observations = 20, fail.criteria = 1,
 
     if (data.structure == "list") {
         #build list
-        test.return <- list(REACTIONS = reactions,
-                            NON_REACTIONS = non.reactions,
+        test.return <- list(F_CRITERIA = fail.criteria,
+                            REACT = reactions,
+                            NON_REACT = non.reactions,
                             TRIALS = reactions + non.reactions,
-                            PCT_REACTIONS = reactions / (reactions + non.reactions),
+                            MAX_TRIALS = max.trials,
+                            PCT_REACT = reactions / (reactions + non.reactions),
                             P = p,
                             RESULT = ifelse(reactions >= fail.criteria,
                                             "FAIL", "PASS"))
