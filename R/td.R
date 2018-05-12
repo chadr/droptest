@@ -1,16 +1,13 @@
 td <- function(sim.values) {
-    # Generates groups of simulated test series.
+    # Calculates average distance from P for observed reaction percent.
     #
     # Args:
-    #   num.groups: Integer. Specifies how many groups of drop tests to produce.
-    #   use.range: If TRUE, a range of probablities will be used. One for each
-    #     group.
-    #   range: Vector. Specifies range of probabilities to be used when 
-    #     use.range is TRUE. Note: Vector length must equal value of num.groups.
+    #   sim.values: data.frame. Data frame produced by droptest::trials, 
+    #     droptest::series, or droptest::groups.
     #
     # Returns:
-    #   Data frame of groups where each group consists of multiple drop tests.
-    #   Note: Only data frame is supported at this time.
+    #   Data frame of mean total trials per test, and trial deviation (average
+    #     distance from P). Aggregated by P levels.
 
     # check input var(s)
     if (!is.data.frame(sim.values)) {
@@ -24,18 +21,21 @@ td <- function(sim.values) {
 
     if ("GROUP" %in% sim.values) {
         # process each group
+
+
     } else {
         # only one probability level
 
-        # mean of observed reaction probability
-        #avg.p = mean(simulated.values$PCT_REACTIONS)
-        #sim.values$AVG_PCT <- mean(sim.values$PCT_REACTIONS)
+        # get squared distances
         sim.values$TD <- sim.values$P - sim.values$PCT_REACT
         sim.values$TD <- sim.values$TD ^ 2
+
         sim.values$AVG_TRIALS <- sim.values$TRIALS
         
+        # aggregate by P and get means
         td.output <- aggregate(cbind(AVG_TRIALS, TD) ~ P, FUN = mean,
                                data = sim.values)
+        # variance to sd
         td.output$TD <- sqrt(td.output$TD)
     } 
 
