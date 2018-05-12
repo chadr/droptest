@@ -21,8 +21,23 @@ td <- function(sim.values) {
     }
 
     if ("GROUP" %in% sim.values) {
+        td.output <- NULL
         # process each group
-
+        for (group in unique(sim.values$GROUP)) {
+            # current group
+            c.group <- sim.values[sim.values$GROUP == group]
+            # get squared distances
+            c.group$TD <- c.group$P - c.group$PCT_REACT
+            c.group$TD <- c.group$TD ^ 2
+            c.group$AVG_TRIALS <- c.group$TRIALS     
+            # aggregate by P and get means
+            g.output <- aggregate(cbind(TD, AVG_TRIALS) ~ P, FUN = mean,
+                                  data = sim.values)
+            # get "trial deviation"
+            g.output$TD <- sqrt(td.output$TD)
+            # build output
+            td.output <- rowbind(td.output, g.output)
+        }
 
     } else {
         # only one probability level
