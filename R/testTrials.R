@@ -32,6 +32,10 @@ testTrials <- function(p, observations = 20, fail.criteria = 1,
         # count number of reactions and non-reactions
         reactions <- sum(results[0:index])
         non.reactions <- index    
+
+        if (index == 20) {
+            non.reactions = non.reactions - 1
+        }
     }
     
     if (data.structure == "data.frame") {
