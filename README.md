@@ -36,7 +36,7 @@ only one or two result values. Alternatively, if a material passes, or if the
 failure condition occurs on the last observation, then the test returns as many
 result values as observations.
 
-Simulation can be used to examine the behavior of this truncated test procedure.
+Simulation can be used to examine the behavior of this test procedure.
 
 Inspired by NASA Technical Note NASA-TN-D-7663 (1974):
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
