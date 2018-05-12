@@ -17,7 +17,7 @@ td <- function(sim.values) {
         stop("Input should be a data frame.")
     }
     # make sure data frame is in correct format
-    if (!all(c("PCT_REACTIONS", "P") %in% names(sim.values))) {
+    if (!all(c("PCT_REACT", "P") %in% names(sim.values))) {
         stop("Input data frame is malformed. See droptest::trials,
              droptest::series, or droptest::groups")
     }
@@ -30,10 +30,12 @@ td <- function(sim.values) {
         # mean of observed reaction probability
         #avg.p = mean(simulated.values$PCT_REACTIONS)
         #sim.values$AVG_PCT <- mean(sim.values$PCT_REACTIONS)
-        sim.values$TD <- sim.values$P - sim.values$PCT_REACTIONS
+        sim.values$TD <- sim.values$P - sim.values$PCT_REACT
         sim.values$TD <- sim.values$TD ^ 2
+        sim.values$AVG_TRIALS <- sim.values$TRIALS
         
-        td.output <- aggregate(TD ~ P, FUN = mean, data = sim.values)
+        td.output <- aggregate(cbind(AVG_TRIALS, TD) ~ P, FUN = mean,
+                               data = sim.values)
         td.output$TD <- sqrt(td.output$TD)
     } 
 
