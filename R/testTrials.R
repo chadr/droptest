@@ -43,6 +43,7 @@ testTrials <- function(p, observations = 20, fail.criteria = 1,
         test.return <- data.frame(REACTIONS = reactions,
                                   NON_REACTIONS = non.reactions,
                                   TRIALS = reactions + non.reactions,
+                                  PCT_REACTIONS = reactions / (reactions + non.reactions),
                                   P = p,
                                   RESULT = ifelse(reactions >= fail.criteria,
                                                 "FAIL", "PASS"))
@@ -57,6 +58,8 @@ testTrials <- function(p, observations = 20, fail.criteria = 1,
         #build list
         test.return <- list(REACTIONS = reactions,
                             NON_REACTIONS = non.reactions,
+                            TRIALS = reactions + non.reactions,
+                            PCT_REACTIONS = reactions / (reactions + non.reactions),
                             P = p,
                             RESULT = ifelse(reactions >= fail.criteria,
                                             "FAIL", "PASS"))
