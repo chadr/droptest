@@ -1,5 +1,5 @@
-testTrials <- function(p, observations = 20, fail.criteria = 1,
-                       raw.data = FALSE, data.structure = "data.frame") {
+trials <- function(p, observations = 20, fail.criteria = 1,
+                   raw.data = FALSE, data.structure = "data.frame") {
     # Completes a simulated drop test.
     # 
     # Args:
