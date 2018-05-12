@@ -5,6 +5,7 @@ trials <- function(p, max.trials = 20, fail.criteria = 1,
     # Args:
     #   p: Integer. Specifies the probability that a reaction occurs.
     #     A reaction is interpreted as a failure.
+    #   max.trials: Integer. Maximum number of trials per test.
     #   fail.criteria: Integer. Specifies number of reactions that can occur
     #     before entire test is considered a failure. Default is 1.
     #   raw.data: If TRUE, output includes non-truncated binomial sample; If
