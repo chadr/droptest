@@ -1,5 +1,6 @@
 td <- function(sim.values) {
-    # Calculates average distance from P for observed reaction percent.
+    # Calculates average distance from P for observed reaction percent ("Trial 
+    #   Deviation").
     #
     # Args:
     #   sim.values: data.frame. Data frame produced by droptest::trials, 
@@ -29,13 +30,11 @@ td <- function(sim.values) {
         # get squared distances
         sim.values$TD <- sim.values$P - sim.values$PCT_REACT
         sim.values$TD <- sim.values$TD ^ 2
-
-        sim.values$AVG_TRIALS <- sim.values$TRIALS
-        
+        sim.values$AVG_TRIALS <- sim.values$TRIALS     
         # aggregate by P and get means
-        td.output <- aggregate(cbind(AVG_TRIALS, TD) ~ P, FUN = mean,
+        td.output <- aggregate(cbind(TD, AVG_TRIALS) ~ P, FUN = mean,
                                data = sim.values)
-        # variance to sd
+        # get "trial deviation"
         td.output$TD <- sqrt(td.output$TD)
     } 
 
