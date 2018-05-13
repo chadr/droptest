@@ -1,8 +1,8 @@
-binomialplot <- function(...) {
+gayleplot <- function(...) {
 	# Creates a plot of standard deviation (%), vs probability of reaction(%).
 	# Similar to the one seen in NASA Technical Note NASA-TN D-7905. (1970)
 	# https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf
-    #
+	#
 	# Plots historical non-truncated data standard deviations against binomial
 	# process. Also plots standard deviations of truncated data (from
 	# simulation) and "trial deviation" as defined by the function "td" in this
