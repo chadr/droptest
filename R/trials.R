@@ -1,5 +1,5 @@
 trials <- function(p, max.trials = 20, fail.criteria = 1,
-                   raw.data = FALSE, data.structure = "data.frame") {
+                   raw.data = FALSE, data.structure = "data.table") {
     # Completes a simulated drop test.
     # 
     # Args:
@@ -10,12 +10,12 @@ trials <- function(p, max.trials = 20, fail.criteria = 1,
     #     before entire test is considered a failure. Default is 1.
     #   raw.data: If TRUE, output includes non-truncated binomial sample; If
     #     FALSE, it does not. Default is FALSE.
-    #   data.structure: Default is data.frame.
+    #   data.structure: Default is data.table.
     #  
     # Returns:
-    #   Result of simulation as a data frame or list, depending on value of 
+    #   Result of simulation as a data table or list, depending on value of 
     #     data.structure.
-
+    require(data.table)
     # constant
     k <- 1
     
@@ -39,9 +39,9 @@ trials <- function(p, max.trials = 20, fail.criteria = 1,
         }
     }
     
-    if (data.structure == "data.frame") {
+    if (data.structure == "data.table") {
         # build data frame
-        test.return <- data.frame(F_CRITERIA = fail.criteria,
+        test.return <- data.table(F_CRITERIA = fail.criteria,
                                   REACT = reactions,
                                   NON_REACT = non.reactions,
                                   TRIALS = reactions + non.reactions,
