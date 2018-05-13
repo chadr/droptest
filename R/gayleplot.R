@@ -10,8 +10,10 @@ gayleplot <- function(...) {
     # in this package.
     #
     # Returns:
-    #   Data frame of multiple simulated drop tests. Note: Only data frame is
+    #   Data table of multiple simulated drop tests. Note: Only data frame is
     #     supported at this time.
+    require("data.table")
+
     arguments <- list(...)
   
     # values of P for simulated data

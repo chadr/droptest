@@ -6,14 +6,14 @@ series <- function(num.series, tag.group = FALSE, group = 0, ...) {
     #   num.series: Integer. Specifies how many drop tests to simulate.
     #   group: Integer. Assigns a group number to each simulated drop test.
     #     Default is 0.
-    #   tag.group: If TRUE, group number is included in output data frame.
+    #   tag.group: If TRUE, group number is included in output data table.
     #     Default is FALSE.
     #
     # Returns:
-    #   Data frame of multiple simulated drop tests. Note: Only data frame is
+    #   Data table of multiple simulated drop tests. Note: Only data frame is
     #     supported at this time.
-    #require("dplyr")
     require(data.table)
+    
     tests <- NULL
 
     for (i in 1:num.series) {

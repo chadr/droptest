@@ -3,12 +3,13 @@ trialdev <- function(sim.values) {
     #   Deviation").
     #
     # Args:
-    #   sim.values: data.frame. Data frame produced by droptest::trials, 
+    #   sim.values: data.table. Data table produced by droptest::trials, 
     #     droptest::series, or droptest::groups.
     #
     # Returns:
-    #   Data frame of mean total trials per test, and trial deviation (average
+    #   Data table of mean total trials per test, and trial deviation (average
     #     distance from P). Aggregated by P levels.
+    require("data.table")
 
     # check input var(s)
     if (!is.data.frame(sim.values)) {
@@ -16,7 +17,7 @@ trialdev <- function(sim.values) {
     }
     # make sure data frame is in correct format
     if (!all(c("PCT_REACT", "P") %in% names(sim.values))) {
-        stop("Input data frame is malformed. See droptest::trials,
+        stop("Input data table is malformed. See droptest::trials,
              droptest::series, or droptest::groups")
     }
 
@@ -36,7 +37,7 @@ trialdev <- function(sim.values) {
             # get "trial deviation"
             g.output$TD <- sqrt(td.output$TD)
             # build output
-            td.output <- rowbind(td.output, g.output)
+            td.output <- rbind(td.output, g.output)
         }
 
     } else {
