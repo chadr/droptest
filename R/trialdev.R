@@ -1,4 +1,4 @@
-td <- function(sim.values) {
+trialdev <- function(sim.values) {
     # Calculates average distance from P for observed reaction percent ("Trial 
     #   Deviation").
     #

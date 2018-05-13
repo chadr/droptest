@@ -1,5 +1,5 @@
 gayleplot <- function(...) {
-    # Creates a plot of standard deviation (%), vs probability of reaction(%).
+    # Creates plot of standard deviation (%), vs probability of reaction (%).
     # Similar to the one seen in NASA Technical Note NASA-TN D-7905. (1970)
     # Written by J. B. Gayle. The namesake of this function.
     # https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf
@@ -27,7 +27,7 @@ gayleplot <- function(...) {
     obs.group$PCT_REACT_SD <- obs.group$PCT_REACT
     obs.group <- aggregate(PCT_REACT_SD ~ P, FUN = sd, data = obs.group)
 
-    trial.dev <- td(obs.group)
+    trial.dev <- trialdev(obs.group)
 
     # generate binomial distribution data
     q <- 1 - b.range
