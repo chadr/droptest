@@ -6,8 +6,8 @@ gayleplot <- function(...) {
     #
     # Plots historical non-truncated data standard deviations against binomial
     # process. Also plots standard deviations of truncated data (from
-    # simulation) and "trial deviation" as defined by the function "td" in this
-    # package.
+    # simulation) and "trial deviation" as defined by the function "trialdev"
+    # in this package.
     #
     # Returns:
     #   Data frame of multiple simulated drop tests. Note: Only data frame is
@@ -35,8 +35,8 @@ gayleplot <- function(...) {
     binomial.group <- data.frame(BIN_P = b.range, 
                                  BIN_SD = sqrt((b.range * q) / n))
 
-    old <- data.frame(P = c(0.01, 0.02, 0.03, 0.04, 0.05, 0.0656, 0.0908, 0.1562, 0.256,0.4),
-                      SD = c(.022, .027, 0.034, 0.045, 0.047, 0.060, 0.066, 0.079, 0.085, 0.125))
+    # read historical data from rds file
+    old <- readRDS("../data/D7905.rds")
 
     # smooth curve for simulated std dev points
     smoothingSpline = smooth.spline(obs.group$P, obs.group$PCT_REACT_SD,

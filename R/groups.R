@@ -11,6 +11,7 @@ groups <- function(num.groups = NULL, multi.p = FALSE, probs = NULL, ...) {
     # Returns:
     #   Data frame of groups where each group consists of multiple drop tests.
     #   Note: Only data frame is supported at this time.
+    require("dplyr")
 
     if (length(probs) > 0) {
         num.groups <- length(probs)
@@ -27,13 +28,13 @@ groups <- function(num.groups = NULL, multi.p = FALSE, probs = NULL, ...) {
         # fixed probability for each group
       	if (multi.p == FALSE) {
             # generate several groups of drop tests
-            groups <- rbind(groups, series(tag.group = TRUE, group = i,
+            groups <- bind_rows(groups, series(tag.group = TRUE, group = i,
                             ...))
         }
         # varying probability by group
         if (multi.p == TRUE) {
             # generate several groups of drop tests
-            groups <- rbind(groups, series(tag.group = TRUE, p = probs[[i]],
+            groups <- bind_rows(groups, series(tag.group = TRUE, p = probs[[i]],
                             group = i, ...))
         }
     }

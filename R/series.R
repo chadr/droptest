@@ -3,7 +3,7 @@ series <- function(num.series, tag.group = FALSE, group = 0, ...) {
     # for more information.
     #
     # Args:
-    #   num.tests: Integer. Specifies how many drop tests to simulate.
+    #   num.series: Integer. Specifies how many drop tests to simulate.
     #   group: Integer. Assigns a group number to each simulated drop test.
     #     Default is 0.
     #   tag.group: If TRUE, group number is included in output data frame.
@@ -12,12 +12,13 @@ series <- function(num.series, tag.group = FALSE, group = 0, ...) {
     # Returns:
     #   Data frame of multiple simulated drop tests. Note: Only data frame is
     #     supported at this time.
+    require("dplyr")
 
     tests <- NULL
 
     for (i in 1:num.series) {
         # generate a batch of drop tests
-        tests <- rbind(tests, trials(data.structure = "data.frame", ...))
+        tests <- bind_rows(tests, trials(data.structure = "data.frame", ...))
     }
 
     if (tag.group == TRUE) {

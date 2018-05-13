@@ -49,7 +49,8 @@ trials <- function(p, max.trials = 20, fail.criteria = 1,
                                   PCT_REACT = reactions / (reactions + non.reactions),
                                   P = p,
                                   RESULT = ifelse(reactions >= fail.criteria,
-                                                "FAIL", "PASS"))
+                                                "FAIL", "PASS"),
+                                  stringsAsFactors = FALSE)
      
         if (raw.data == TRUE) {
           # provide raw data if requested (not truncated)
