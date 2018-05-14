@@ -12,8 +12,8 @@ trialdev <- function(sim.values) {
     require("data.table")
 
     # check input var(s)
-    if (!is.data.frame(sim.values)) {
-        stop("Input should be a data frame.")
+    if (!is.data.table(sim.values)) {
+        stop("Input should be a data table.")
     }
     # make sure data frame is in correct format
     if (!all(c("PCT_REACT", "P") %in% names(sim.values))) {

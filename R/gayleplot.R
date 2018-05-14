@@ -27,7 +27,7 @@ gayleplot <- function(...) {
 
     #aggregate by P and get std deviation of reactions
     obs.group$PCT_REACT_SD <- obs.group$PCT_REACT
-    obs.group <- aggregate(PCT_REACT_SD ~ P, FUN = sd, data = obs.group)
+    obs.agg <- aggregate(PCT_REACT_SD ~ P, FUN = sd, data = obs.group)
 
     trial.dev <- trialdev(obs.group)
 
@@ -41,16 +41,19 @@ gayleplot <- function(...) {
     old <- readRDS("../data/D7905.rds")
 
     # smooth curve for simulated std dev points
-    smoothingSpline = smooth.spline(obs.group$P, obs.group$PCT_REACT_SD,
+    smoothingSpline = smooth.spline(obs.agg$P, obs.agg$PCT_REACT_SD,
                                     spar=0.35)
+
     sm = smooth.spline(trial.dev$P, trial.dev$TD, spar=0.35)
+    oldsm = smooth.spline(old$P, old$SD, spar=0.35)
 
     # create binomial plot
     # plot simulated std dev points
-    plot(obs.group$P, obs.group$PCT_REACT_SD, pch = 19, ylim = c(0, 0.18),
+    plot(obs.agg$P, obs.agg$PCT_REACT_SD, pch = 19, ylim = c(0, 0.18),
          xlim=c(0, 0.5))
     # add smoothed curve for simulated std dev points
     lines(smoothingSpline, col = "blue", lwd=2)
+    lines(oldsm, col="black", lwd=2)
     # add binomial distribution curve
     lines(binomial.group$BIN_P, binomial.group$BIN_SD, col = "red", lwd = 2,)
     # add data points used in original paper
