@@ -17,7 +17,7 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
     arguments <- list(...)
   
     # generate groups of simulated data
-    obs.group <- groups(probs = simp, ...)
+    obs.group <- dgroups(probs = simp, ...)
   
     #aggregate by P and get std deviation of reactions
     obs.group$PCT_REACT_SD <- obs.group$PCT_REACT

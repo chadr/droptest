@@ -11,7 +11,7 @@ ratioplot <- function(simp = seq(0.01, 0.20, by=0.01), ...) {
     #     supported at this time.
     
     # generate simulated test data
-    sim.data <- groups(probs = simp, ...)
+    sim.data <- dgroups(probs = simp, ...)
     # convert p to percent
     sim.data$P <- sim.data$P * 100
     
@@ -28,7 +28,8 @@ ratioplot <- function(simp = seq(0.01, 0.20, by=0.01), ...) {
             col = c("RED", "GREEN"))
   
     # plot legend where you want
-    legend(ncol(sim.table) + 5, 100, rownames(sim.table), col = c("RED", "GREEN"), pch = 15, bty = "n")
+    legend(ncol(sim.table) + 5, 100, rownames(sim.table),
+    	   col = c("RED", "GREEN"), pch = 15, bty = "n")
   
     # restore default clipping rect
     par(mar = c(5, 4, 4, 2) + 0.1)

@@ -1,4 +1,4 @@
-series <- function(num.series, tag.group = FALSE, group = 0, ...) {
+dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
     # Completes multiple series of dsimulated rop tests. See testTrials.R
     # for more information.
     #
@@ -18,7 +18,7 @@ series <- function(num.series, tag.group = FALSE, group = 0, ...) {
 
     for (i in 1:num.series) {
         # generate a batch of drop tests
-        tests <- rbind(tests, trials(data.structure = "data.table", ...))
+        tests <- rbind(tests, dtrials(data.structure = "data.table", ...))
     }
 
     if (tag.group == TRUE) {

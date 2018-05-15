@@ -1,4 +1,4 @@
-trials <- function(p, max.trials = 20, fail.criteria = 1,
+dtrials <- function(p, max.trials = 20, fail.criteria = 1,
                    raw.data = FALSE, data.structure = "data.table") {
     # Completes a simulated drop test.
     # 

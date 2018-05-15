@@ -5,22 +5,10 @@ importFrom(data.table,
      "rbind"
 )
 
-export(maxadjr,
-       qqnorml,
-       Cpplot,
-       vif,
-       prplot,
-       halfnorm,
-       fround,
-       pfround,
-       logit,
-       ilogit)
-
-exportMethods(
-    "trials",
-    "series",
-    "groups",
-    "trialdev",
-    "gayleplot",
-    "ratioplot"
+export(dtrials,
+       dseries,
+       dgroups,
+       trialdev,
+       gayleplot,
+       ratioplot
 )
