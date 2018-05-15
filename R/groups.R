@@ -3,8 +3,6 @@ groups <- function(num.groups = NULL, probs = NULL, ...) {
     #
     # Args:
     #   num.groups: Integer. Specifies how many groups of drop tests to produce.
-    #   multi.p: If TRUE, values of probablities will be used. One for each
-    #     group.
     #   probs: Vector. Specifies values of probabilities to be used when 
     #     multi.p is TRUE. Note: Vector length must equal value of num.groups.
     #
