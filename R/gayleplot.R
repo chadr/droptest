@@ -31,7 +31,7 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
     simb = seq(0.01, 0.5, by=0.01)
     q <- 1 - simb
     n <- 20
-    binomial.group <- data.frame(BIN_P = 100 * simb, 
+    binomial.group <- data.table(BIN_P = 100 * simb, 
                                  BIN_SD = 100 * sqrt((simb * q) / n))
   
     # read historical data from rds file

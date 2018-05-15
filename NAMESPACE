@@ -1,0 +1,18 @@
+importFrom(graphics,
+     "plot"
+)
+
+export(maxadjr,
+       qqnorml,
+       Cpplot,
+       vif,
+       prplot,
+       halfnorm,
+       fround,
+       pfround,
+       logit,
+       ilogit)
+
+exportMethods(
+    "sumary"
+)
