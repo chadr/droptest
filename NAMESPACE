@@ -1,6 +1,9 @@
 importFrom(graphics,
      "plot"
 )
+importFrom(data.table,
+     "rbind"
+)
 
 export(maxadjr,
        qqnorml,
@@ -14,5 +17,10 @@ export(maxadjr,
        ilogit)
 
 exportMethods(
-    "sumary"
+    "trials",
+    "series",
+    "groups",
+    "trialdev",
+    "gayleplot",
+    "ratioplot"
 )
