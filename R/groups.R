@@ -1,4 +1,4 @@
-groups <- function(num.groups = NULL, multi.p = FALSE, probs = NULL, ...) {
+groups <- function(num.groups = NULL, probs = NULL, ...) {
     # Generates groups of simulated test series.
     #
     # Args:
@@ -26,13 +26,13 @@ groups <- function(num.groups = NULL, multi.p = FALSE, probs = NULL, ...) {
 
     for(i in 1:num.groups) {
         # fixed probability for each group
-      	if (multi.p == FALSE) {
+      	if (length(probs) == 1) {
             # generate several groups of drop tests
             groups <- rbind(groups, series(tag.group = TRUE, group = i,
                             ...))
         }
         # varying probability by group
-        if (multi.p == TRUE) {
+        if (length(probs) > 1) {
             # generate several groups of drop tests
             groups <- rbind(groups, series(tag.group = TRUE, p = probs[[i]],
                             group = i, ...))
