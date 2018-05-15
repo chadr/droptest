@@ -9,14 +9,19 @@ ratioplot <- function(simp = seq(0.01, 0.20, by=0.01), ...) {
     # Returns:
     #   Data table of multiple simulated drop tests. Note: Only data frame is
     #     supported at this time.
+    
+    # generate simulated test data
     sim.data <- groups(probs = simp, ...)
+    # convert p to percent
     sim.data$P <- sim.data$P * 100
-  
+    
+    # collect frequencies into table
     sim.table <- table(sim.data$RESULT, sim.data$P)
   
     # expand right side of clipping rect to make room for the legend
     par(xpd = TRUE, mar = par()$mar+c(0,0,0,4))
   
+    # create plot
     barplot(sim.table, main = "RATIO OF PASS/FAIL FOR REPEATED TEST SERIES",
             xlab = "SIMULATED PROBABILITY OF REACTION, PERCENT", 
             ylab = "TOTAL NUMBER OF SIMULATED TEST SERIES",
