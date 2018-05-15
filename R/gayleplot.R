@@ -9,11 +9,9 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
   # simulation).
   #
   # Args:
-  #   simp: Vector. Probabilities to use for simulated values. Defaults to
-  #     range of p = 0.01 to p = 0.05 in 0.05 steps.
-  # Returns:
-  #   Data table of multiple simulated drop tests. Note: Only data frame is
-  #     supported at this time.
+  #   simp: Vector. Probabilities to use for simulated trials. Defaults to
+  #     range of p = 0.01 to p = 0.5 in 0.05 steps.
+  #
   require("data.table")
   
   arguments <- list(...)
