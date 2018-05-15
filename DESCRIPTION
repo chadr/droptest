@@ -7,7 +7,7 @@ Description: Generates simulated data representing the LOX/GOX drop testing
     process (Impact testing). Functions are provided to simulate trials, test
     series, and groups of test series. Test attributes and criteria can be set
     arbitrarily.
-Depends: R (>= 3.4.3)
+Depends: R (>= 3.4.3), data.table
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
