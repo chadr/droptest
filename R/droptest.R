@@ -60,8 +60,8 @@
 #'  series are identified with a group number. Within each group test parameters
 #'  will be identical.
 #' 
-#'  Trial Deviation: Akin to the population standard deviation. The average
-#'  distance from q for the total percent of reactions (failures).
+#'  Trial Deviation: The average distance from q for the total percent of
+#'  reactions (failures).
 #' 
 #' @references
 #'  For more information on drop testing: 

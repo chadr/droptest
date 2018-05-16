@@ -18,7 +18,7 @@ gayleplot <- function(simq = seq(0.01, 0.5, by = 0.05), ...) {
   #' @examples
   #'   gayleplot(num.series = 100)
   #'   gayleplot(num.series = 1000)
-  #'   gayleplot(num.series = 1000, simq = seq(0.01, 0.5, by = 0.01))
+  #'   gayleplot(num.series = 100, simq = seq(0.01, 0.5, by = 0.01))
   #'   
   #' @seealso 
   #'   \code{\link{dgroups}} 
@@ -27,45 +27,45 @@ gayleplot <- function(simq = seq(0.01, 0.5, by = 0.05), ...) {
 
   arguments <- list(...)
   
-    # generate groups of simulated data
-    obs.group <- dgroups(probs = simq, ...)
+  # generate groups of simulated data
+  obs.group <- dgroups(probs = simq, ...)
   
-    #aggregate by Q and get std deviation of reactions
-    obs.group$PCT_REACT_SD <- obs.group$PCT_REACT
-    obs.agg <- aggregate(PCT_REACT_SD ~ Q, FUN = sd, data = obs.group)
+  #aggregate by Q and get std deviation of reactions
+  obs.group$PCT_REACT_SD <- obs.group$PCT_REACT
+  obs.agg <- aggregate(PCT_REACT_SD ~ Q, FUN = sd, data = obs.group)
 
-    # convert decimal to percent
-    obs.agg$Q <- obs.agg$Q * 100
-    obs.agg$PCT_REACT_SD <- obs.agg$PCT_REACT_SD * 100
+  # convert decimal to percent
+  obs.agg$Q <- obs.agg$Q * 100
+  obs.agg$PCT_REACT_SD <- obs.agg$PCT_REACT_SD * 100
   
-    # generate binomial distribution data
-    simb = seq(0.01, 0.5, by=0.01)
-    q <- 1 - simb
-    n <- 20
-    binomial.group <- data.table(BIN_P = 100 * simb, 
-                                 BIN_SD = 100 * sqrt((simb * q) / n))
+  # generate binomial distribution data
+  simb = seq(0.01, 0.5, by=0.01)
+  q <- 1 - simb
+  n <- 20
+  binomial.group <- data.table(BIN_P = 100 * simb, 
+                               BIN_SD = 100 * sqrt((simb * q) / n))
   
-    # historical non-truncated data
-    old <- data.frame(droptest::D7905)
-    old$P <- old$P * 100
-    old$SD <- old$SD * 100
+  # historical non-truncated data
+  old <- data.frame(droptest::D7905)
+  old$P <- old$P * 100
+  old$SD <- old$SD * 100
   
-    # smooth curve for simulated std deviation points
-    sm.sim.sd = smooth.spline(obs.agg$Q, obs.agg$PCT_REACT_SD, spar=0.35)
+  # smooth curve for simulated std deviation points
+  sm.sim.sd = smooth.spline(obs.agg$Q, obs.agg$PCT_REACT_SD, spar=0.35)
 
-    # create binomial plot
-    # plot binomial distribution curve
-    plot(binomial.group$BIN_P, binomial.group$BIN_SD, col = "red", lwd = 2,
-         type = "l", ylim = c(0, 18), xlim=c(0, 50), main = "GAYLE PLOT",
-         xlab = "PROBABILITY OF REACTION, PERCENT",
-         ylab = "STANDARD DEVIATION, PERCENT")
-    # plot data points used in original paper
-    points(old$P, old$SD, col = "black", pch=15)
-    # plot simulated std dev points
-    points(obs.agg$Q, obs.agg$PCT_REACT_SD, pch = 19)
-    # plot smoothed curve for simulated std deviation points
-    lines(sm.sim.sd, col = "blue", lwd=2)
-    # legend
-    legend("bottomright", legend = c("Non-Truncated (Historical)",
-           "Truncated (Simulated)"), col = "black", pch = c(15, 19))
+  # create binomial plot
+  # plot binomial distribution curve
+  plot(binomial.group$BIN_P, binomial.group$BIN_SD, col = "red", lwd = 2,
+       type = "l", ylim = c(0, 18), xlim=c(0, 50), main = "GAYLE PLOT",
+       xlab = "PROBABILITY OF REACTION, PERCENT",
+       ylab = "STANDARD DEVIATION, PERCENT")
+  # plot data points used in original paper
+  points(old$P, old$SD, col = "black", pch=15)
+  # plot simulated std dev points
+  points(obs.agg$Q, obs.agg$PCT_REACT_SD, pch = 19)
+  # plot smoothed curve for simulated std deviation points
+  lines(sm.sim.sd, col = "blue", lwd=2)
+  # legend
+  legend("bottomright", legend = c("Non-Truncated (Historical)",
+         "Truncated (Simulated)"), col = "black", pch = c(15, 19))
 }
