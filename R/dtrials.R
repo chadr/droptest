@@ -16,8 +16,8 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
   #'   that can occur before an entire test is considered a failure. Default
   #'   is 1.
   #' @param raw.data Logical. If \code{TRUE}, output includes non-truncated
-  #'   binomial sample. If \code{FALSE}, it does not. Default is FALSE. Real
-  #'   world testing only produces truncated results.
+  #'   binomial sample. If \code{FALSE}, it does not. Default is \code{FALSE}.
+  #'   Real world testing only produces truncated results.
   #' @param data.structure Instructs function to return result as a data.table
   #'   or a list. Default is data.table. Note: Other functions in this package
   #'   only work with data.tables. List is an option strictly for future
