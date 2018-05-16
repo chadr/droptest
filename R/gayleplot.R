@@ -1,29 +1,40 @@
-gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
-    # Creates plot of standard deviation (%), vs probability of reaction (%).
-    # Similar to the one seen in NASA Technical Note NASA-TN D-7905. (1970)
-    # Written by J. B. Gayle. The namesake of this function.
-    # https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf
-    #
-    # Plots historical non-truncated data standard deviations against binomial
-    # process. Also plots standard deviations of truncated data (from
-    # simulation).
-    #
-    # Args:
-    #   simp: Vector. Probabilities to use for simulated trials. Defaults to
-    #     range of p = 0.01 to p = 0.5 in 0.05 steps.
-    #
+gayleplot <- function(simq = seq(0.01, 0.5, by = 0.05), ...) {
+  #' Creates plot of standard deviation (%), vs probability of reaction (%).
+  #'
+  #' \code{gayleplot} Creates a plot similar to the one seen in NASA Technical
+  #' Note \strong{NASA-TN D-7905}. (1970) Written by J. B. Gayle. The namesake
+  #' of this function.
+  #' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf}
+  #' 
+  #' Plots historical non-truncated data standard deviations (%) against
+  #' binomial process. Also plots standard deviations (%) of truncated data
+  #' (from simulation).
+  #'
+  #' @param simq Vector. Probabilities of failure (q) to use for simulated
+  #'   trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.
+  #' @param ... Passes values to \code{dgroups}.
+  #'   
+  #' @examples
+  #'   gayleplot(num.series = 100)
+  #'   gayleplot(num.series = 1000)
+  #'   gayleplot(num.series = 1000, simq = seq(0.01, 0.5, by = 0.01))
+  #'   
+  #' @seealso 
+  #'   \code{\link{dseries}}
+  #'   \code{\link{dtrials}}
+  #'   \code{\link{dgroups}}  
 
     arguments <- list(...)
   
     # generate groups of simulated data
-    obs.group <- dgroups(probs = simp, ...)
+    obs.group <- dgroups(probs = simq, ...)
   
-    #aggregate by P and get std deviation of reactions
+    #aggregate by Q and get std deviation of reactions
     obs.group$PCT_REACT_SD <- obs.group$PCT_REACT
     obs.agg <- aggregate(PCT_REACT_SD ~ Q, FUN = sd, data = obs.group)
 
     # convert decimal to percent
-    obs.agg$P <- obs.agg$Q * 100
+    obs.agg$Q <- obs.agg$Q * 100
     obs.agg$PCT_REACT_SD <- obs.agg$PCT_REACT_SD * 100
   
     # generate binomial distribution data
@@ -35,7 +46,7 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
   
     # historical non-truncated data
     old <- NULL
-    old <- data.frame("D7905")
+    old <- data.frame(D7905)
     old$P <- old$P * 100
     old$SD <- old$SD * 100
   
@@ -55,6 +66,6 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
     # plot smoothed curve for simulated std deviation points
     lines(sm.sim.sd, col = "blue", lwd=2)
     # legend
-    legend(x = 39.5, y = 3, legend = c("Non-Truncated (Historical)",
+    legend("bottomright", legend = c("Non-Truncated (Historical)",
            "Truncated (Simulated)"), col = "black", pch = c(15, 19))
 }

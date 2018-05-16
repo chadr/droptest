@@ -15,6 +15,8 @@ dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #'   and \code{fail.criteria} to \code{dtrials}. All are optional except
   #'   \code{q}.
   #'
+  #' @examples
+  #'
   #' @return Data table of multiple simulated drop tests. 
   #'   Where each row of the data.table represents one simulated drop test. 
   #'   \strong{Note:} Only data table is supported at this time.

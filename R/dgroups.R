@@ -11,18 +11,28 @@ dgroups <- function(num.groups = NULL, probs = NULL, ...) {
   #'   multi.p is TRUE. Note: Vector length must equal value of num.groups.
   #' @param ... Passes values to \code{dseries}.
   #' 
+  #' @examples
+  #'   dgroups(num.groups = 2, probs = c(0.01, 0.2), num.series = 5)
+  #'   dgroups(num.groups = 5, probs = seq(0.01, 0.05, by = 0.01), num.series = 2) 
+  #' 
   #' @return Data table of groups where each group consists of multiple drop
   #'   tests. \strong{Note:} Only data table is supported at this time.
   #'   
-  #' @seealso \code{\link{dseries}}
+  #' @seealso 
+  #'   \code{\link{dseries}}
+  #'   \code{\link{dtrials}}
 
     if (length(probs) > 0) {
         num.groups <- length(probs)
     }
 
     if (length(probs) == 0 && is.null(num.groups)) {
-        stop("If multiple values for P aren't used then number of groups
+        stop("If multiple values for Q aren't used then number of groups
              must be specified.")
+    }
+  
+    if (is.null(probs)) {
+      stop("Must specify probabilities for groups.")
     }
 
     groups <- NULL
