@@ -3,6 +3,8 @@ Title: Simulates LOX/GOX drop testing.
 Version: 0.0.0.9000
 Authors: person("Chad", "Ross", email = "chad.ross@gmail.com",
     role = c("aut", "cre"))
+Author: Chad Ross
+Maintainer: Chad Ross <chad.ross@gmail.com>
 Description: Generates simulated data representing the LOX/GOX drop testing 
     process (Impact testing). Functions are provided to simulate trials, test
     series, and groups of test series. Functions for creating plots specific to
@@ -15,3 +17,5 @@ LazyData: true
 Imports: data.table
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/chadr/droptest
+RoxygenNote: 6.0.1
