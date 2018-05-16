@@ -21,6 +21,5 @@ Written by J. B. Gayle.
 }
 \examples{
 data(D7905)
-## maybe str(D7905) ; plot(D7905) ...
 }
 \keyword{datasets}
