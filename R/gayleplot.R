@@ -33,8 +33,9 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
     binomial.group <- data.table(BIN_P = 100 * simb, 
                                  BIN_SD = 100 * sqrt((simb * q) / n))
   
-    # read historical data from rds file
-    old <- D7905
+    # historical non-truncated data
+    old <- NULL
+    old <- data.frame("D7905")
     old$P <- old$P * 100
     old$SD <- old$SD * 100
   

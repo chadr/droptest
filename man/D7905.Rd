@@ -4,7 +4,7 @@
 \title{Historical Non-Truncated Data}
 \description{
 Historical drop test data that was not truncated by the testers. Useful for
-comparing to modern truncated test methods and simularion output.
+comparing to modern truncated test methods and simulation output.
 }
 \usage{data("D7905")}
 \format{

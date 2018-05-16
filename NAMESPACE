@@ -1,5 +1,7 @@
 importFrom("graphics", "plot", "barplot", "legend", "lines", "par", "points")
 importFrom("stats", "aggregate", "rbinom", "sd", "smooth.spline")
+importFrom("data.table", "data.table", "is.data.table")
+importFrom("utils", "data")
 
 export(dtrials,
        dseries,

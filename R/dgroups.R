@@ -14,7 +14,7 @@ dgroups <- function(num.groups = NULL, probs = NULL, ...) {
         num.groups <- length(probs)
     }
 
-    if (length(probs) == 0 && is.Null(num.groups)) {
+    if (length(probs) == 0 && is.null(num.groups)) {
         stop("If multiple values for P aren't used then number of groups
              must be specified.")
     }
