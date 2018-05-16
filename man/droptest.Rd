@@ -47,13 +47,14 @@ ASTM G86-17 \url{https://www.astm.org/Standards/G86.htm}
 Note: This package is not constrained by any standard. Arbitrary test 
 criteria and observations can be specified for maximum flexibility.
 }
-\section{Foo functions}{
+\section{Package source}{
 
-The foo functions ...
+\url{https://github.com/chadr/droptest}
 }
 
 \references{
 For more information on drop testing: 
+
 "An Instrument for Determination of Impact Sensitivity of Materials in Contact with 
 Liquid Oxygen" (AB6002-EB). 1960. 
 \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}

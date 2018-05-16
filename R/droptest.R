@@ -42,6 +42,7 @@
 #'
 #' @references
 #' For more information on drop testing: 
+#' 
 #' "An Instrument for Determination of Impact Sensitivity of Materials in Contact with 
 #' Liquid Oxygen" (AB6002-EB). 1960. 
 #' \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
@@ -49,8 +50,8 @@
 #' "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
 #' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
 #' 
-#' @section Foo functions:
-#' The foo functions ...
+#' @section Package source:
+#' \url{https://github.com/chadr/droptest}
 #'
 #' @docType package
 #' 

@@ -16,6 +16,10 @@ dtrials <- function(p, max.trials = 20, fail.criteria = 1,
     #   Result of simulation as a data table or list, depending on value of 
     #     data.structure.
 
+    if (fail.criteria > max.trials) {
+      stop("max.trials must be greater than or equal to fail.criteria")
+    }
+  
     # constant
     k <- 1
     
