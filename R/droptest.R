@@ -79,6 +79,7 @@
 #'  \code{\link{dgroups}}
 #'  \code{\link{trialdev}}
 #'  \code{\link{gayleplot}}
+#'  \code{\link{ratioplot}}
 #' 
 #' @section Package source
 #'  \url{https://github.com/chadr/droptest}

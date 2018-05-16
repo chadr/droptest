@@ -63,6 +63,7 @@ For more information on drop testing:
  \code{\link{dgroups}}
  \code{\link{trialdev}}
  \code{\link{gayleplot}}
+ \code{\link{ratioplot}}
 }
 \author{
 Chad Ross \email{chad.ross@gmail.com}

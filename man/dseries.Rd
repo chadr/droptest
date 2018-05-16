@@ -13,13 +13,13 @@ simulate.}
 \item{tag.group}{Logical. If \code{TRUE}, group number is included in
 output data table. Default is \code{FALSE}.}
 
-\item{...}{Passes \code{q}, \code{max.trials}, \code{fail.criteria},
-\code{raw.data}, and \code{fail.criteria} to \code{dtrials}. All are
-optional except \code{q}.}
-
-\item{group:}{Integer. Assigns a group number to each simulated drop test
+\item{group}{Integer. Assigns a group number to each simulated drop test
 within the same series. Only if \code{tag.group} is \code{TRUE}. Default
 is 0.}
+
+\item{...}{Passes \code{q}, \code{max.trials}, \code{fail.criteria},
+and \code{fail.criteria} to \code{dtrials}. All are optional except
+\code{q}.}
 }
 \value{
 Data table of multiple simulated drop tests. 
@@ -29,4 +29,13 @@ Data table of multiple simulated drop tests.
 \description{
 \code{dseries} returns a series of simulated drops tests. Where each test
 consists of independent drops (trials).
+}
+\examples{
+  dseries(num.series = 5, q = 0.05)
+  dseries(num.series = 5, q = 0.05, max.trials = 60)
+  dseries(num.series = 5, q = 0.05, max.trials = 60, fail.criteria = 2)
+  
+}
+\seealso{
+\code{\link{dtrials}}
 }
