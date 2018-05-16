@@ -15,8 +15,7 @@ dtrials <- function(p, max.trials = 20, fail.criteria = 1,
     # Returns:
     #   Result of simulation as a data table or list, depending on value of 
     #     data.structure.
-    require(data.table)
-    
+
     # constant
     k <- 1
     

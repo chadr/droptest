@@ -1,6 +1,6 @@
-importFrom(graphics, "plot")
-importFrom("graphics", "barplot", "legend", "lines", "par", "points")
+importFrom("graphics", "plot", "barplot", "legend", "lines", "par", "points")
 importFrom("stats", "aggregate", "rbinom", "sd", "smooth.spline")
+importFrom("data.table", "rbind")
 
 export(dtrials,
        dseries,

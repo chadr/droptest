@@ -9,7 +9,6 @@ trialdev <- function(sim.values) {
     # Returns:
     #   Data table of mean total trials per test, and trial deviation (average
     #     distance from P). Aggregated by P levels.
-    require("data.table")
 
     # check input var(s)
     if (!is.data.table(sim.values)) {

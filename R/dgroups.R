@@ -9,7 +9,6 @@ dgroups <- function(num.groups = NULL, probs = NULL, ...) {
     # Returns:
     #   Data table of groups where each group consists of multiple drop tests.
     #   Note: Only data table is supported at this time.
-    require("data.table")
 
     if (length(probs) > 0) {
         num.groups <- length(probs)

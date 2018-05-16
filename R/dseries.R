@@ -12,8 +12,7 @@ dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
     # Returns:
     #   Data table of multiple simulated drop tests. Note: Only data frame is
     #     supported at this time.
-    require(data.table)
-    
+
     tests <- NULL
 
     for (i in 1:num.series) {
