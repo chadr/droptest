@@ -41,24 +41,24 @@
 #' criteria and observations can be specified for maximum flexibility.
 #'
 #' @section Definitions
-#'  Trial: A bernoulli trial that represents one drop of the impactor onto a 
-#'  material sample. q is the probability of a failure. A reaction is recorded
-#'  as a failure. p is the probability of success. A non-reaction is recorded as
-#'  a success. Where \eqn{p = 1 - q}.
+#'  Trial: A simulated bernoulli trial that represents one drop of the impactor
+#'  onto a material sample. q is the probability of a failure. A reaction is
+#'  recorded as a failure. p is the probability of success. A non-reaction is
+#'  recorded as a success. Where \eqn{p = 1 - q}.
 #' 
-#'  Drop Test: A collection of trials generated with equal parameters. (q, 
-#'  number of trials, failure criteria, etc). When the failute criteria is
+#'  Drop Test: A collection of simulated trials generated with equal parameters
+#'  (q, number of trials, failure criteria, etc). When the failute criteria is
 #'  reached the test is immediately terminated and no more trials are completed.
 #'  The sooner a test reaches the failure criteria results in less total trials
 #'  for that particular test. A test that consists of no failures will always
 #'  contain the maximum nuber of trials as defined in the function parameters.
 #' 
-#'  Test Series: A collection of drop tests. A group number can be attached to
-#'  the drop tests in a test series (optional).
+#'  Test Series: A collection of simulated drop tests. A group number can be
+#'  attached to the drop tests in a test series (optional).
 #' 
-#'  Groups: A collection of multiple test series. Each batch of test series are
-#'  identified with a group number. Within each group test parameters will be 
-#'  identical.
+#'  Groups: A collection of multiple simulated test series. Each batch of test
+#'  series are identified with a group number. Within each group test parameters
+#'  will be identical.
 #' 
 #'  Trial Deviation: Akin to the population standard deviation. The average
 #'  distance from q for the total percent of reactions (failures).

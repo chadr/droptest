@@ -20,10 +20,10 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
   
     #aggregate by P and get std deviation of reactions
     obs.group$PCT_REACT_SD <- obs.group$PCT_REACT
-    obs.agg <- aggregate(PCT_REACT_SD ~ P, FUN = sd, data = obs.group)
+    obs.agg <- aggregate(PCT_REACT_SD ~ Q, FUN = sd, data = obs.group)
 
     # convert decimal to percent
-    obs.agg$P <- obs.agg$P * 100
+    obs.agg$P <- obs.agg$Q * 100
     obs.agg$PCT_REACT_SD <- obs.agg$PCT_REACT_SD * 100
   
     # generate binomial distribution data
@@ -40,7 +40,7 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
     old$SD <- old$SD * 100
   
     # smooth curve for simulated std deviation points
-    sm.sim.sd = smooth.spline(obs.agg$P, obs.agg$PCT_REACT_SD, spar=0.35)
+    sm.sim.sd = smooth.spline(obs.agg$Q, obs.agg$PCT_REACT_SD, spar=0.35)
 
     # create binomial plot
     # plot binomial distribution curve
@@ -51,7 +51,7 @@ gayleplot <- function(simp = seq(0.01, 0.5, by=0.05), ...) {
     # plot data points used in original paper
     points(old$P, old$SD, col = "black", pch=15)
     # plot simulated std dev points
-    points(obs.agg$P, obs.agg$PCT_REACT_SD, pch = 19)
+    points(obs.agg$Q, obs.agg$PCT_REACT_SD, pch = 19)
     # plot smoothed curve for simulated std deviation points
     lines(sm.sim.sd, col = "blue", lwd=2)
     # legend

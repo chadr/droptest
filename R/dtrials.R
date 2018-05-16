@@ -11,7 +11,8 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
   #' @param max.trials Integer. The maximum number of bernoulli trials to
   #'   perform. where each trial represents one drop of the impactor onto
   #'   a sample. The simulated test can only reach this number of trials if
-  #'   no reactions (failures) occur. Default is 20.
+  #'   no reactions (failures) occur. In other words: trials performed will
+  #'   always be less than or equal to \code{max.trials}. Default is 20.
   #' @param fail.criteria Integer. Specifies number of reactions (failures)
   #'   that can occur before an entire test is considered a failure. Default
   #'   is 1.
@@ -22,9 +23,27 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
   #'   data.tables. List is an option strictly for future flexibility.
   #' 
   #' @return Result of simulation as a data table or list -- depending on value
-  #'   of \code{data.structure}. Where #@%#%#@^#@$^#@$^
+  #'   of \code{data.structure}. 
+  #'   
+  #'   Where:
+  #'    \strong{F_CRITERIA} is the failure criteria specified (default is 1).
+  #'    \strong{REACT} is the total number of reactions (failures).
+  #'    \strong{NON_REACT} is the total number of non-reactions (successes)
+  #'    \strong{TRIALS} is the number of trials performed until failure 
+  #'     condition met. If the failure condition was met. If the failure
+  #'     condition was not met then this values will always be equal to
+  #'     MAX_TRIALS.
+  #'    \strong{MAX_TRIALS} is the maximum number of trials to perform as
+  #'     specified (default is 20). TRIALS will always be less than or equal to
+  #'     MAX_TRIALS.
+  #'    \strong{PCT_REACT} is the percent of trials that yielded a reaction
+  #'     (failure).
+  #'    \strong{Q} is the probability of failure (reaction) as specified.
+  #'    \strong{P} is the probability of success (non-reaction).
+  #'    \strong{RESULT} is whether the test series as a whole failed or passed
+  #'     based on the failure criteria specified.
   #'
-  #'  @examples 
+  #' @examples 
   #'   dtrials(0.05)
   #'   dtrials(0.05, max.trials = 60)
   #'   dtrials(0.05, fail.criteria = 2)

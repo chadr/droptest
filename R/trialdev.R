@@ -27,11 +27,11 @@ trialdev <- function(sim.values) {
             # current group
             c.group <- sim.values[sim.values$GROUP == group]
             # get squared distances
-            c.group$TD <- c.group$P - c.group$PCT_REACT
+            c.group$TD <- c.group$Q - c.group$PCT_REACT
             c.group$TD <- c.group$TD ^ 2
             c.group$AVG_TRIALS <- c.group$TRIALS     
             # aggregate by P and get means
-            g.output <- aggregate(cbind(TD, AVG_TRIALS) ~ P, FUN = mean,
+            g.output <- aggregate(cbind(TD, AVG_TRIALS) ~ Q, FUN = mean,
                                   data = sim.values)
             # get "trial deviation"
             g.output$TD <- sqrt(td.output$TD)
@@ -43,11 +43,11 @@ trialdev <- function(sim.values) {
         # only one probability level
 
         # get squared distances
-        sim.values$TD <- sim.values$P - sim.values$PCT_REACT
+        sim.values$TD <- sim.values$Q - sim.values$PCT_REACT
         sim.values$TD <- sim.values$TD ^ 2
         sim.values$AVG_TRIALS <- sim.values$TRIALS     
         # aggregate by P and get means
-        td.output <- aggregate(cbind(TD, AVG_TRIALS) ~ P, FUN = mean,
+        td.output <- aggregate(cbind(TD, AVG_TRIALS) ~ Q, FUN = mean,
                                data = sim.values)
         # get "trial deviation"
         td.output$TD <- sqrt(td.output$TD)

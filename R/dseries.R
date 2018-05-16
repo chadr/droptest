@@ -1,8 +1,8 @@
 dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #' Completes multiple series of simulated drop tests.
   #' 
-  #' \code{dseries} returns a series of drops tests. Where each test consists
-  #' of independent drops (trials).
+  #' \code{dseries} returns a series of simulated drops tests. Where each test
+  #' consists of independent drops (trials).
   #'
   #' @param num.series Integer. Specifies how many series of drop tests to
   #'   simulate.
@@ -12,13 +12,19 @@ dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #'   within the same series. Only if \code{tag.group} is \code{TRUE}. Default
   #'   is 0.
   #' @param ... Passes \code{q}, \code{max.trials}, \code{fail.criteria},
-  #'   \code{raw.data}, and \code{fail.criteria} to \code{dtrials}. All are
-  #'   optional except \code{q}.
-  #' @return Data table of multiple simulated drop tests. Note: Only data table
-  #'   is supported at this time.
+  #'   and \code{fail.criteria} to \code{dtrials}. All are optional except
+  #'   \code{q}.
+  #'
+  #' @return Data table of multiple simulated drop tests. 
+  #'   Where each row of the data.table represents one simulated drop test. 
+  #'   \strong{Note:} Only data table is supported at this time.
+  #'   
+  #' @seealso \code{\link{dtrials}}
 
+  # NULL object to prepare for rbinds
   tests <- NULL
 
+  # generate data.table
   for (i in 1:num.series) {
     # generate a batch of drop tests
     tests <- rbind(tests, dtrials(data.structure = "data.table", ...))

@@ -22,10 +22,11 @@ within the same series. Only if \code{tag.group} is \code{TRUE}. Default
 is 0.}
 }
 \value{
-Data table of multiple simulated drop tests. Note: Only data table
-  is supported at this time.
+Data table of multiple simulated drop tests. 
+  Where each row of the data.table represents one simulated drop test. 
+  \strong{Note:} Only data table is supported at this time.
 }
 \description{
-\code{dseries} returns a series of drops tests. Where each test consists
-of independent drops (trials).
+\code{dseries} returns a series of simulated drops tests. Where each test
+consists of independent drops (trials).
 }
