@@ -1,7 +1,7 @@
 dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #' Completes multiple series of simulated drop tests.
   #' 
-  #' \code{dseries} returns a series of drops test. Where each test consists
+  #' \code{dseries} returns a series of drops tests. Where each test consists
   #' of independent drops (trials).
   #'
   #' @param num.series Integer. Specifies how many series of drop tests to
@@ -12,8 +12,8 @@ dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #'   within the same series. Only if \code{tag.group} is \code{TRUE}. Default
   #'   is 0.
   #' @param ... Passes \code{q}, \code{max.trials}, \code{fail.criteria},
-  #'   \code{raw.data}, \code{fail.criteria}, and \code{raw.data} to 
-  #'   \code{dtrials}.
+  #'   \code{raw.data}, and \code{fail.criteria} to \code{dtrials}. All are
+  #'   optional except \code{q}.
   #' @return Data table of multiple simulated drop tests. Note: Only data table
   #'   is supported at this time.
 

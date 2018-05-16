@@ -4,7 +4,7 @@
 \alias{dtrials}
 \title{Completes a simulated drop test.}
 \usage{
-dtrials(q, max.trials = 20, fail.criteria = 1, raw.data = FALSE,
+dtrials(q, max.trials = 20, fail.criteria = 1,
   data.structure = "data.table")
 }
 \arguments{
@@ -25,17 +25,14 @@ is 1.}
 \item{data.structure}{Instructs function to return result as a data.table
 or a list. Default is data.table. 
 
-\strong{Note:} Other functions in this package only work with data.tables. List is
-an option strictly for future flexibility.}
+\strong{Note:} Other functions in this package only work with
+data.tables. List is an option strictly for future flexibility.}
 }
 \value{
 Result of simulation as a data table or list -- depending on value
   of \code{data.structure}. Where #@%#%#@^#@$^#@$^
-}
-\description{
-\code{dtrials} returns bernoulli trials that make up a drop test.
-}
-\examples{
+
+ @examples 
   dtrials(0.05)
   dtrials(0.05, max.trials = 60)
   dtrials(0.05, fail.criteria = 2)
@@ -45,4 +42,7 @@ Result of simulation as a data table or list -- depending on value
 \dontrun{
 dtrials()
 }
+}
+\description{
+\code{dtrials} returns bernoulli trials that compose a drop test.
 }

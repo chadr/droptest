@@ -47,20 +47,22 @@ ASTM G86-17 \url{https://www.astm.org/Standards/G86.htm}
 Note: This package is not constrained by any standard. Arbitrary test 
 criteria and observations can be specified for maximum flexibility.
 }
-\section{Package source}{
-
-\url{https://github.com/chadr/droptest}
-}
-
 \references{
 For more information on drop testing: 
 
-"An Instrument for Determination of Impact Sensitivity of Materials in 
-Contact with Liquid Oxygen" (AB6002-EB). 1960. 
-\url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
+ "An Instrument for Determination of Impact Sensitivity of Materials in 
+ Contact with Liquid Oxygen" (AB6002-EB). 1960. 
+ \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
 
-"Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
-\url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
+ "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
+ \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
+}
+\seealso{
+\code{\link{dtrials}}
+ \code{\link{dseries}}
+ \code{\link{dgroups}}
+ \code{\link{trialdev}}
+ \code{\link{gayleplot}}
 }
 \author{
 Chad Ross \email{chad.ross@gmail.com}

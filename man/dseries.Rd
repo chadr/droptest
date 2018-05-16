@@ -14,8 +14,8 @@ simulate.}
 output data table. Default is \code{FALSE}.}
 
 \item{...}{Passes \code{q}, \code{max.trials}, \code{fail.criteria},
-\code{raw.data}, \code{fail.criteria}, and \code{raw.data} to 
-\code{dtrials}.}
+\code{raw.data}, and \code{fail.criteria} to \code{dtrials}. All are
+optional except \code{q}.}
 
 \item{group:}{Integer. Assigns a group number to each simulated drop test
 within the same series. Only if \code{tag.group} is \code{TRUE}. Default
@@ -26,6 +26,6 @@ Data table of multiple simulated drop tests. Note: Only data table
   is supported at this time.
 }
 \description{
-\code{dseries} returns a series of drops test. Where each test consists
+\code{dseries} returns a series of drops tests. Where each test consists
 of independent drops (trials).
 }

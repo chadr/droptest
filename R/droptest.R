@@ -40,18 +40,48 @@
 #' Note: This package is not constrained by any standard. Arbitrary test 
 #' criteria and observations can be specified for maximum flexibility.
 #'
+#' @section Definitions
+#'  Trial: A bernoulli trial that represents one drop of the impactor onto a 
+#'  material sample. q is the probability of a failure. A reaction is recorded
+#'  as a failure. p is the probability of success. A non-reaction is recorded as
+#'  a success. Where \eqn{p = 1 - q}.
+#' 
+#'  Drop Test: A collection of trials generated with equal parameters. (q, 
+#'  number of trials, failure criteria, etc). When the failute criteria is
+#'  reached the test is immediately terminated and no more trials are completed.
+#'  The sooner a test reaches the failure criteria results in less total trials
+#'  for that particular test. A test that consists of no failures will always
+#'  contain the maximum nuber of trials as defined in the function parameters.
+#' 
+#'  Test Series: A collection of drop tests. A group number can be attached to
+#'  the drop tests in a test series (optional).
+#' 
+#'  Groups: A collection of multiple test series. Each batch of test series are
+#'  identified with a group number. Within each group test parameters will be 
+#'  identical.
+#' 
+#'  Trial Deviation: Akin to the population standard deviation. The average
+#'  distance from q for the total percent of reactions (failures).
+#' 
 #' @references
-#' For more information on drop testing: 
+#'  For more information on drop testing: 
 #' 
-#' "An Instrument for Determination of Impact Sensitivity of Materials in 
-#' Contact with Liquid Oxygen" (AB6002-EB). 1960. 
-#' \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
+#'  "An Instrument for Determination of Impact Sensitivity of Materials in 
+#'  Contact with Liquid Oxygen" (AB6002-EB). 1960. 
+#'  \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
 #'
-#' "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
-#' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
+#'  "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
+#'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
 #' 
-#' @section Package source:
-#' \url{https://github.com/chadr/droptest}
+#' @seealso 
+#'  \code{\link{dtrials}}
+#'  \code{\link{dseries}}
+#'  \code{\link{dgroups}}
+#'  \code{\link{trialdev}}
+#'  \code{\link{gayleplot}}
+#' 
+#' @section Package source
+#'  \url{https://github.com/chadr/droptest}
 #'
 #' @docType package
 #' 
