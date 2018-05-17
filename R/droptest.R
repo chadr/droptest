@@ -13,15 +13,15 @@
 #' non-reaction is a success. The specified number of trials -- until failure --
 #' produces one test series.
 #'
-#' Drop testing -- performed by the military and NASA -- yields results that are
-#' difficult to analyze. Numerous tech briefs and standards have attempted to
-#' address the problem -- see below for more information. While fundamentally a
-#' binomial process, drop testing almost always produces truncated data. Testing
-#' stops as soon as a failure condition is reached. If the failure condition 
-#' occurs on drop one or two -- depending on the failure criteria -- then the
-#' test returns only one or two result values. Alternatively, if a material
-#' passes, or if the failure condition occurs on the last observation, then the
-#' test returns as many result values as observations.
+#' While fundamentally a bindomial process, drop testing -- performed by the
+#' military and NASA -- yields results that are difficult to analyze. Numerous
+#' tech briefs and standards have attempted to address the problem (see below
+#' for more information). Testing stops as soon as a failure condition is
+#' reached. If the failure condition occurs on drop one or two -- depending on
+#' the failure criteria -- then the test returns only one or two result values.
+#' Alternatively, if a material passes, or if the failure condition occurs on
+#' the last observation, then the test returns as many result values as 
+#' observations.
 #'
 #' Simulation can be used to examine the behavior of this test procedure.
 #'
