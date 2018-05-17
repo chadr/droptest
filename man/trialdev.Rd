@@ -16,9 +16,12 @@ Data table of q, p, trial deviation, and average total trials per
   
  Where:
  \strong{Q} is the probability of failure (reaction) as specified.
+ 
  \strong{P} is the probability of success (non-reaction).
+ 
  \strong{TRIAL_DEV} is the average distance from q for the total percent of
   reactions (failures).
+  
  \strong{AVG_TRIALS} is the average number of simulated trials for each
   level of q.
 }

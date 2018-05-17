@@ -37,10 +37,10 @@
 #' ASTM D2512 \url{https://www.astm.org/Standards/D2512.htm}
 #' ASTM G86-17 \url{https://www.astm.org/Standards/G86.htm}
 #'
-#' Note: This package is not constrained by any standard. Arbitrary test 
+#' \strong{Note:} This package is not constrained by any standard. Arbitrary test 
 #' criteria and observations can be specified for maximum flexibility.
 #'
-#' @section Definitions
+#' \strong{Definitions}
 #'  Trial: A simulated bernoulli trial that represents one drop of the impactor
 #'  onto a material sample. q is the probability of a failure. A reaction is
 #'  recorded as a failure. p is the probability of success. A non-reaction is

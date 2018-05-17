@@ -1,6 +1,6 @@
 Package: droptest
 Title: Simulates LOX/GOX drop testing
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors: person("Chad", "Ross", email = "chad.ross@gmail.com",
     role = c("aut", "cre"))
 Author: Chad Ross
