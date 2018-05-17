@@ -11,13 +11,32 @@ dgroups(num.groups = NULL, probs = NULL, ...)
 produce.}
 
 \item{probs}{Vector. Specifies values of probabilities to be used when 
-multi.p is TRUE. Note: Vector length must equal value of num.groups.}
+Note: Vector length must equal value of num.groups.}
 
 \item{...}{Passes values to \code{dseries}.}
 }
 \value{
 Data table of groups where each group consists of multiple drop
   tests. \strong{Note:} Only data table is supported at this time.
+  
+ Where:
+ \strong{F_CRITERIA} is the failure criteria specified (default is 1).
+ \strong{REACT} is the total number of simulated reactions (failures).
+ \strong{NON_REACT} is the total number of simulated non-reactions
+  (successes).
+ \strong{TRIALS} is the number of simulated trials performed until failure 
+  condition met. If the failure condition was not met then this value
+  will always be equal to \strong{MAX_TRIALS}.
+ \strong{MAX_TRIALS} is the maximum number of simulated trials to perform
+  as specified (default is 20). \strong{TRIALS} will always be less than
+  or equal to \strong{MAX_TRIALS}.
+ \strong{PCT_REACT} is the percent of simulated trials that yielded a
+  reaction (failure).
+ \strong{Q} is the probability of failure (reaction) as specified.
+ \strong{P} is the probability of success (non-reaction).
+ \strong{RESULT} is whether the simulated test series as a whole failed
+  or passed based on the failure criteria specified.
+ \strong{GROUP} denotes the group of simulated test series.
 }
 \description{
 \code{dgroups} returns a collection of multiple simulated test series. Each

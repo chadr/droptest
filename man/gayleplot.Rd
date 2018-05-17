@@ -23,11 +23,14 @@ of this function.
 Plots historical non-truncated data standard deviations (%) against
 binomial process. Also plots standard deviations (%) of truncated data
 (from simulation).
+
+Shows how non-truncated data follows a binomial process, but truncated data
+does not.
 }
 \examples{
   gayleplot(num.series = 100)
   gayleplot(num.series = 1000)
-  gayleplot(num.series = 1000, simq = seq(0.01, 0.5, by = 0.01))
+  gayleplot(num.series = 100, simq = seq(0.01, 0.5, by = 0.01))
   
 }
 \seealso{

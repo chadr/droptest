@@ -10,6 +10,9 @@ gayleplot <- function(simq = seq(0.01, 0.5, by = 0.05), ...) {
   #' Plots historical non-truncated data standard deviations (%) against
   #' binomial process. Also plots standard deviations (%) of truncated data
   #' (from simulation).
+  #' 
+  #' Shows how non-truncated data follows a binomial process, but truncated data
+  #' does not.
   #'
   #' @param simq Vector. Probabilities of failure (q) to use for simulated
   #'   trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.
