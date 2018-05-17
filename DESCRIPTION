@@ -1,7 +1,7 @@
 Package: droptest
-Title: Simulates LOX/GOX drop testing
+Title: Simulates LOX/GOX Drop Testing
 Version: 0.0.0.9001
-Authors: person("Chad", "Ross", email = "chad.ross@gmail.com",
+Authors@R: person("Chad", "Ross", email = "chad.ross@gmail.com",
     role = c("aut", "cre"))
 Author: Chad Ross
 Maintainer: Chad Ross <chad.ross@gmail.com>
@@ -15,7 +15,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: data.table
-Suggests: knitr, rmarkdown
-VignetteBuilder: knitr
 URL: https://github.com/chadr/droptest
 RoxygenNote: 6.0.1
