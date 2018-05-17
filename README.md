@@ -12,9 +12,6 @@ To get the current development version from github:
 # install.packages("devtools")
 devtools::install_github("chadr/droptest")
 ```
-
-### Getting Started:
-
 ### Examples and documentation
 
 ### Background information:
