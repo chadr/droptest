@@ -26,7 +26,7 @@ is a bernoulli trial where a reaction is a failure and a non-reaction is a
 success. The specified number of trials -- until failure -- produces one test
 series.
 
-While fundamentally a bindomial process, drop testing -- performed by the
+While fundamentally a binomial process, drop testing -- performed by the
 military and NASA -- yields results that are difficult to analyze. Numerous tech
 briefs and standards have attempted to address the problem (see below for more
 information). Testing stops as soon as a failure condition is reached. If the
