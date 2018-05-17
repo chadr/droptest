@@ -8,7 +8,7 @@ dgroups <- function(num.groups = NULL, probs = NULL, ...) {
   #' @param num.groups Integer. Specifies how many groups of drop tests to
   #'   produce.
   #' @param probs Vector. Specifies values of probabilities to be used when 
-  #'   multi.p is TRUE. Note: Vector length must equal value of num.groups.
+  #'   Note: Vector length must equal value of num.groups.
   #' @param ... Passes values to \code{dseries}.
   #' 
   #' @examples
