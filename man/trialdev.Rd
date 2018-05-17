@@ -26,6 +26,10 @@ Data table of q, p, trial deviation, and average total trials per
 \code{trialdev} Creates data.table with the average distances from q for
 the total percent of reactions (failures).
 }
+\examples{
+  trialdev(dtrials(q = 0.05, max.trials = 60, fail.criteria = 2))
+
+}
 \seealso{
 \code{\link{dtrials}}
  \code{\link{dseries}}

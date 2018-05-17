@@ -2,8 +2,7 @@
 % Please edit documentation in R/gayleplot.R
 \name{gayleplot}
 \alias{gayleplot}
-\title{Creates plot of standard deviation percent, vs probability of reaction
-percent.}
+\title{Plot of std deviation percent, vs probability of reaction percent.}
 \usage{
 gayleplot(simq = seq(0.01, 0.5, by = 0.05), ...)
 }
@@ -29,7 +28,6 @@ does not.
 }
 \examples{
   gayleplot(num.series = 100)
-  gayleplot(num.series = 1000)
   gayleplot(num.series = 100, simq = seq(0.01, 0.5, by = 0.01))
   
 }

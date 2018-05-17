@@ -11,7 +11,7 @@ ratioplot <- function(simq = seq(0.01, 0.20, by=0.01),
   #' @param ... Passes values to \code{dgroups}.
   #'   
   #' @examples
-  #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 1000)
+  #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100)
   #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100,
   #'            colors = c("BLUE", "BLACK"))
   #'   

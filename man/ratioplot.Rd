@@ -19,7 +19,7 @@ trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.}
  series, by simulated probability of reaction.
 }
 \examples{
- ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 1000)
+ ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100)
  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100,
            colors = c("BLUE", "BLACK"))
   

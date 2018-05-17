@@ -15,7 +15,7 @@
 #'
 #' Drop testing -- performed by the military and NASA -- yields results that are
 #' difficult to analyze. Numerous tech briefs and standards have attempted to
-#' address the problem (see below for more information). While fundamentally a
+#' address the problem -- see below for more information. While fundamentally a
 #' binomial process, drop testing almost always produces truncated data. Testing
 #' stops as soon as a failure condition is reached. If the failure condition 
 #' occurs on drop one or two -- depending on the failure criteria -- then the
@@ -26,7 +26,7 @@
 #' Simulation can be used to examine the behavior of this test procedure.
 #'
 #' Inspired by NASA Technical Note "Computer Simulation of Threshold Sensitivity
-#' Determinations" (NASA-TN-D-7663). 1974.
+#' Determinations" NASA-TN-D-7663. 1974.
 #' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf}
 #'
 #' Pass/Fail criteria and number of observations required have been defined in
@@ -67,10 +67,10 @@
 #'  For more information on drop testing: 
 #' 
 #'  "An Instrument for Determination of Impact Sensitivity of Materials in 
-#'  Contact with Liquid Oxygen" (AB6002-EB). 1960. 
+#'  Contact with Liquid Oxygen" AB6002-EB. 1960. 
 #'  \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
 #'
-#'  "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
+#'  "Lox/Gox Mechanical Impact Tester Assessment" TM-74106. 1980.
 #'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
 #' 
 #' @seealso 

@@ -7,7 +7,7 @@ trialdev <- function(sim.values) {
   #' @param sim.values data.table. Data table produced by droptest::trials, 
   #'   droptest::series, or droptest::groups.
   #'
-  #' @example
+  #' @examples
   #'   trialdev(dtrials(q = 0.05, max.trials = 60, fail.criteria = 2))
   #' 
   #' @return Data table of q, p, trial deviation, and average total trials per
