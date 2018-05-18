@@ -83,3 +83,6 @@ https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf
 
 * "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf
+
+**Note:** This work is not endorsed by or affiliated with NASA. Released under
+MIT license. See: https://github.com/chadr/droptest/blob/master/MIT_LICENSE
