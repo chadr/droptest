@@ -14,7 +14,7 @@ trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.}
 }
 \description{
 \code{gayleplot} Creates a plot similar to the one seen in NASA Technical
-Note \strong{NASA-TN D-7905}. (1970) Written by J. B. Gayle. The namesake
+Note \strong{NASA-TN-D-7905}. (1970) Written by J. B. Gayle. The namesake
 of this function.
 \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf}
 }
