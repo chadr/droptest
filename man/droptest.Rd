@@ -18,7 +18,7 @@ material will interact with liquid (LOX) or gaseous oxygen (GOX). The
 material is exposed to the LOX/GOX and an impactor is dropped onto the
 sample. Each drop is a bernoulli trial where a reaction is a failure and a
 non-reaction is a success. The specified number of trials -- until failure --
-produces one test series.
+completes one test.
 
 While fundamentally a binomial process, drop testing -- performed by the
 military and NASA -- yields results that are difficult to analyze. Numerous
@@ -54,11 +54,11 @@ criteria and observations can be specified for maximum flexibility.
  recorded as a success. Where \eqn{p = 1 - q}.
 
 Drop Test: A collection of simulated trials generated with equal parameters
- (q, number of trials, failure criteria, etc). When the failure criteria is
+ (q, number of trials, failure criteria, etc). When the failute criteria is
  reached the test is immediately terminated and no more trials are completed.
- The sooner a test reaches the failure criteria the less total trials
+ The sooner a test reaches the failure criteria results in less total trials
  for that particular test. A test that consists of no failures will always
- contain the maximum number of trials as defined in the function parameters.
+ contain the maximum nuber of trials as defined in the function parameters.
 
 Test Series: A collection of simulated drop tests. A group number can be
  attached to the drop tests in a test series (optional).

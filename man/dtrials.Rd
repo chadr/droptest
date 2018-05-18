@@ -9,12 +9,12 @@ dtrials(q, max.trials = 20, fail.criteria = 1,
 }
 \arguments{
 \item{q}{Integer. Specifies the probability that a reaction occurs. 
-A reaction is interpreted as a failure therefore q is the probability
+A reaction is interpreted as a failure therfore q is the probability
 of failure for the bernoulli trials. Probability of success would be
 \eqn{p = 1 - q}. See \url{https://en.wikipedia.org/wiki/Bernoulli_trial}}
 
 \item{max.trials}{Integer. The maximum number of bernoulli trials to
-perform. Where each trial represents one drop of the impactor onto
+perform. where each trial represents one drop of the impactor onto
 a sample. The simulated test can only reach this number of trials if
 no reactions (failures) occur. In other words: trials performed will
 always be less than or equal to \code{max.trials}. Default is 20.}

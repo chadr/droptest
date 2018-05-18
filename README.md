@@ -17,8 +17,7 @@ Drop testing -- sometimes called impact testing -- is used to evaluate if a
 material will interact with liquid (LOX) or gaseous oxygen (GOX). The material
 is exposed to the LOX/GOX and an impactor is dropped onto the sample. Each drop
 is a bernoulli trial where a reaction is a failure and a non-reaction is a
-success. The specified number of trials -- until failure -- produces one test
-series.
+success. The specified number of trials -- until failure -- completes one test.
 
 While fundamentally a binomial process, drop testing -- performed by the
 military and NASA -- yields results that are difficult to analyze. Numerous tech
