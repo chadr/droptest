@@ -39,7 +39,8 @@ https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
 * **Trial:** A simulated bernoulli trial that represents one drop of the impactor
   onto a material sample. q is the probability of a failure. A reaction is
   recorded as a failure. p is the probability of success. A non-reaction is
-  recorded as a success. Where ```p = 1 - q```.
+  recorded as a success. Where ```p = 1 - q```. See
+  https://en.wikipedia.org/wiki/Bernoulli_trial
  
 * **Drop Test:** A collection of simulated trials generated with equal parameters
   (q, number of trials, failure criteria, etc). When the failure criteria is
