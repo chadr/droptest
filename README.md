@@ -77,7 +77,7 @@ criteria and observations can be specified for maximum flexibility.
 Liquid Oxygen" (AB6002-EB). 1960. 
 https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm
 
-* "Reproducibility of Liquid Oxygen Impact Test Results" (NASA Technical Note D-7905). 1970.
+* "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905). 1970.
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf
 
 * "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.

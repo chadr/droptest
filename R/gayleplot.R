@@ -2,7 +2,7 @@ gayleplot <- function(simq = seq(0.01, 0.5, by = 0.05), ...) {
   #' Plot of std deviation percent, vs probability of reaction percent.
   #'
   #' \code{gayleplot} Creates a plot similar to the one seen in NASA Technical
-  #' Note \strong{NASA-TN D-7905}. (1970) Written by J. B. Gayle. The namesake
+  #' Note \strong{NASA-TN-D-7905}. (1970) Written by J. B. Gayle. The namesake
   #' of this function.
   #' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf}
   #' 

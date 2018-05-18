@@ -44,7 +44,8 @@
 #'  Trial: A simulated bernoulli trial that represents one drop of the impactor
 #'  onto a material sample. q is the probability of a failure. A reaction is
 #'  recorded as a failure. p is the probability of success. A non-reaction is
-#'  recorded as a success. Where \eqn{p = 1 - q}.
+#'  recorded as a success. Where \eqn{p = 1 - q}. See
+#'  \url{https://en.wikipedia.org/wiki/Bernoulli_trial}
 #' 
 #'  Drop Test: A collection of simulated trials generated with equal parameters
 #'  (q, number of trials, failure criteria, etc). When the failute criteria is
@@ -69,6 +70,9 @@
 #'  "An Instrument for Determination of Impact Sensitivity of Materials in 
 #'  Contact with Liquid Oxygen" AB6002-EB. 1960. 
 #'  \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
+#'
+#'  "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905). 1970.
+#'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf}
 #'
 #'  "Lox/Gox Mechanical Impact Tester Assessment" TM-74106. 1980.
 #'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
