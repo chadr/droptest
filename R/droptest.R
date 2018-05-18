@@ -69,7 +69,7 @@
 #'  For more information on drop testing: 
 #' 
 #'  "An Instrument for Determination of Impact Sensitivity of Materials in 
-#'  Contact with Liquid Oxygen" AB6002-EB. 1960. 
+#'  Contact with Liquid Oxygen" AB6002-EB. Lucas (1960). 
 #'  \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
 #'
 #'  "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905). 1970.
