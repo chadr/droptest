@@ -42,10 +42,10 @@
 #'
 #' \strong{Definitions}
 #'  Trial: A simulated bernoulli trial that represents one drop of the impactor
-#'  onto a material sample. q is the probability of a failure. A reaction is
-#'  recorded as a failure. p is the probability of success. A non-reaction is
-#'  recorded as a success. Where \eqn{p = 1 - q}. See
-#'  \url{https://en.wikipedia.org/wiki/Bernoulli_trial}
+#'  onto a material sample. Hence a trial is also referred to as a drop. Where q
+#'  is the probability of a failure. A reaction is recorded as a failure. Where
+#'  p is the probability of success. A non-reaction is recorded as a success.
+#'  Where \eqn{p = 1 - q}. See \url{https://en.wikipedia.org/wiki/Bernoulli_trial}
 #' 
 #'  Drop Test: A collection of simulated trials (drops) generated with equal
 #'  parameters (q, number of trials, failure criteria, etc). When the failure
