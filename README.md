@@ -45,11 +45,11 @@ https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
   recorded as a success. Where ```p = 1 - q```.
  
 * **Drop Test:** A collection of simulated trials generated with equal parameters
-  (q, number of trials, failure criteria, etc). When the failute criteria is
+  (q, number of trials, failure criteria, etc). When the failure criteria is
   reached the test is immediately terminated and no more trials are completed.
-  The sooner a test reaches the failure criteria results in less total trials
+  The sooner a test reaches the failure criteria the less total trials
   for that particular test. A test that consists of no failures will always
-  contain the maximum nuber of trials as defined in the function parameters.
+  contain the maximum number of trials as defined in the function parameters.
  
 * **Test Series:** A collection of simulated drop tests. A group number can be
   attached to the drop tests in a test series (optional).
