@@ -29,17 +29,9 @@
 #' Determinations" NASA-TN-D-7663. 1974.
 #' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf}
 #'
-#' Pass/Fail criteria and number of observations required have been defined in
-#' the following standards:
-#'  
-#' NASA-STD-6001B
-#' \url{https://spaceflightsystems.grc.nasa.gov/SpaceDOC_II/Standards/documents/NASA-STD-6001B-1.pdf}
-#' ASTM D2512 \url{https://www.astm.org/Standards/D2512.htm}
-#' ASTM G86-17 \url{https://www.astm.org/Standards/G86.htm}
-#'
-#' \strong{Note:} This package is not constrained by any standard. Arbitrary test 
-#' criteria and observations can be specified for maximum flexibility.
-#'
+#' \strong{Note:} This work is not endorsed by or affiliated with NASA. Released
+#' under MIT license.
+#' 
 #' \strong{Definitions}
 #'  Trial: A simulated bernoulli trial that represents one drop of the impactor
 #'  onto a material sample. Hence a trial is also referred to as a drop. Where q
@@ -66,16 +58,29 @@
 #'  reactions (failures).
 #' 
 #' @references
-#'  For more information on drop testing: 
+#' Pass/Fail criteria and number of observations required have been defined in
+#' the following standards:
+#'  
+#' NASA-STD-6001B
+#' \url{https://spaceflightsystems.grc.nasa.gov/SpaceDOC_II/Standards/documents/NASA-STD-6001B-1.pdf}
+#' ASTM D2512 \url{https://www.astm.org/Standards/D2512.htm}
+#' ASTM G86-17 \url{https://www.astm.org/Standards/G86.htm}
+#'
+#' \strong{Note:} This package is not constrained by any standard. Arbitrary
+#' test criteria and observations can be specified for maximum flexibility.
+#' 
+#' For more information on drop testing: 
 #' 
 #'  "An Instrument for Determination of Impact Sensitivity of Materials in 
-#'  Contact with Liquid Oxygen" AB6002-EB. Lucas (1960). 
+#'  Contact with Liquid Oxygen" (AB6002-EB). Lucas (1960). 
 #'  \url{https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm}
 #'
-#'  "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905). 1970.
+#'  "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905). 
+#'  Gayle (1970).
 #'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf}
 #'
-#'  "Lox/Gox Mechanical Impact Tester Assessment" TM-74106. 1980.
+#'  "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). Bransford, Bryan,
+#'  Frye, Stohler (1980).
 #'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
 #' 
 #' @seealso 

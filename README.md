@@ -75,13 +75,15 @@ criteria and observations can be specified for maximum flexibility.
 
 ### For more information on drop testing: 
 * "An Instrument for Determination of Impact Sensitivity of Materials in Contact with 
-Liquid Oxygen" (AB6002-EB). 1960. 
+Liquid Oxygen" (AB6002-EB). Lucas (1960). 
 https://www.astm.org/DIGITAL_LIBRARY/STP/MMR/PAGES/AB6002-EB.htm
 
-* "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905). 1970.
+* "Reproducibility of Liquid Oxygen Impact Test Results" (NASA-TN-D-7905).
+Gayle (1970).
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf
 
-* "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). 1980.
+* "Lox/Gox Mechanical Impact Tester Assessment" (TM-74106). Bransford, Bryan,
+Frye, Stohler (1980).
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf
 
 **Note:** This work is not endorsed by or affiliated with NASA. Released under
