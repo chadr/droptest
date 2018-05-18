@@ -31,7 +31,7 @@ then the test returns as many result values as observations.
 Simulation can be used to examine the behavior of this test procedure.
 
 Inspired by NASA Technical Note "Computer Simulation of Threshold Sensitivity
-Determinations" (NASA-TN-D-7663). 1974.
+Determinations" (NASA-TN-D-7663). Gayle (1974).
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
 
 ### Definitions:

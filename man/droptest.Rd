@@ -36,37 +36,37 @@ observations.
 Simulation can be used to examine the behavior of this test procedure.
 
 Inspired by NASA Technical Note "Computer Simulation of Threshold Sensitivity
-Determinations" NASA-TN-D-7663. 1974.
+Determinations" (NASA-TN-D-7663). Gayle (1974).
 \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf}
 }
 \section{Definitions}{
 
 
 \itemize{
- \item Trial: A simulated bernoulli trial that represents one drop of the
- impactor onto a material sample. Hence a trial is also referred to as a
- drop. Where q is the probability of a failure. A reaction is recorded as a
+ \item \strong{Trial:} A simulated bernoulli trial that represents one drop
+ of the impactor onto a material sample. Hence a trial is also referred to as
+ a drop. Where q is the probability of a failure. A reaction is recorded as a
  failure. Where p is the probability of success. A non-reaction is recorded
  as a success. Where \eqn{p = 1 - q}.
  See \url{https://en.wikipedia.org/wiki/Bernoulli_trial}
 
- \item Drop Test: A collection of simulated trials (drops) generated with
- equal parameters (q, number of trials, failure criteria, etc). When the
+ \item \strong{Drop Test:} A collection of simulated trials (drops) generated
+ with equal parameters (q, number of trials, failure criteria, etc). When the
  failure criteria is reached the test is immediately terminated and no more
  trials are completed. The sooner a test reaches the failure criteria results
  in less total trials for that particular test. A test that consists of no
  failures will always contain the maximum nuber of trials as defined in the
  function parameters.
 
- \item Test Series: A collection of simulated drop tests. A group number can
- be attached to the drop tests in a test series (optional).
+ \item \strong{Test Series:} A collection of simulated drop tests. A group
+ number can be attached to the drop tests in a test series (optional).
 
- \item Groups: A collection of multiple simulated test series. Each batch of
- test series are identified with a group number. Within each group test
- parameters will be identical.
+ \item \strong{Groups:} A collection of multiple simulated test series. Each
+ batch of test series are identified with a group number. Within each group
+ test parameters will be identical.
 
- \item Trial Deviation: The average distance from q for the total percent of
- reactions (failures).
+ \item \strong{Trial Deviation:} The average distance from q for the total
+ percent of reactions (failures).
 }
 }
 
