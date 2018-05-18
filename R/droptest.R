@@ -32,7 +32,7 @@
 #' Determinations" NASA-TN-D-7663. 1974.
 #' \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf}
 #' 
-#' @section Definitions
+#' @section Definitions:
 #' 
 #' \itemize{
 #'  \item Trial: A simulated bernoulli trial that represents one drop of the
