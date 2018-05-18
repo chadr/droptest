@@ -16,26 +16,31 @@ trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.}
 none
 }
 \description{
-\code{gayleplot} Creates a plot similar to the one seen in NASA Technical
+\code{gayleplot} Creates plot similar to the one seen in NASA Technical
 Note \strong{NASA-TN-D-7905}. (1970) Written by J. B. Gayle. The namesake
 of this function.
 \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750014413.pdf}
 }
 \details{
-Plots historical non-truncated data standard deviations (%) against
-binomial process. Also plots standard deviations (%) of truncated data
-(from simulation).
+Plots historical standard deviations (%) -- where test series is not halted
+mid-test -- against binomial process. Also plots standard deviations (%)
+from simulation using modern procedure.
 
-Shows how non-truncated data follows a binomial process, but truncated data
-does not.
+Shows how historical data follows a binomial process, but simulated data
+produced using modern procedure does not.
 }
 \examples{
+  # recommended to use num.series value greater than or equal to 1000.
   gayleplot(num.series = 100)
-  gayleplot(num.series = 100, simq = seq(0.01, 0.5, by = 0.01))
+  gayleplot(num.series = 100, simq = seq(0.01, 0.05, by = 0.01))
   
 }
 \seealso{
 \code{\link{dgroups}} 
   \code{\link{dseries}}
   \code{\link{dtrials}}
+  \code{\link{droptest}}
+}
+\author{
+Chad Ross \email{chad.ross@gmail.com}
 }

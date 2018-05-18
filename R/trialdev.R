@@ -1,33 +1,37 @@
 trialdev <- function(sim.values) {
-  #' Calculates the "Trial Deviation".
+  #' Calculates trial deviation for simulated trials (drops).
   #'
-  #' \code{trialdev} Creates data.table with the average distances from q for
+  #' \code{trialdev} creates a data.table with the average distances from q for
   #' the total percent of reactions (failures).  
   #'   
-  #' @param sim.values data.table. Data table produced by droptest::trials, 
-  #'   droptest::series, or droptest::groups.
+  #' @param sim.values Data table. Data table produced by droptest::dtrials, 
+  #'   droptest::dseries, or droptest::dgroups.
   #'
   #' @examples
   #'   trialdev(dtrials(q = 0.05, max.trials = 60, fail.criteria = 2))
   #' 
   #' @return Data table of q, p, trial deviation, and average total trials per
-  #'   test (average distance from q). Aggregated by q levels.
+  #'   test. Aggregated by q.
   #'   
-  #'  Where:
-  #'  \strong{Q} is the probability of failure (reaction) as specified.
+  #' \itemize{
+  #'  \item \strong{Q} The probability of failure (reaction) as specified.
   #'  
-  #'  \strong{P} is the probability of success (non-reaction).
+  #'  \item \strong{P} The probability of success (non-reaction).
   #'  
-  #'  \strong{TRIAL_DEV} is the average distance from q for the total percent of
-  #'   reactions (failures).
+  #'  \item \strong{TRIAL_DEV} The average distance from q for the total percent
+  #'   of reactions (failures).
   #'   
-  #'  \strong{AVG_TRIALS} is the average number of simulated trials for each
-  #'   level of q.
+  #'  \item \strong{AVG_TRIALS} The average number of simulated trials reached
+  #'   for each q.
+  #' }
+  #' 
+  #' @author Chad Ross \email{chad.ross@gmail.com}
   #'
   #' @seealso 
   #'  \code{\link{dtrials}}
   #'  \code{\link{dseries}}
   #'  \code{\link{dgroups}}
+  #'  \code{\link{droptest}}
 
   # check input var(s)
   if (!is.data.table(sim.values)) {

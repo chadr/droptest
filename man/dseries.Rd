@@ -27,29 +27,27 @@ Data table of multiple simulated drop tests.
   Containing the following elements:
   
 \itemize{  
- \item \strong{F_CRITERIA} is the failure criteria specified (default is 1).
+ \item \strong{F_CRITERIA} The failure criteria specified.
  
- \item \strong{REACT} is the total number of simulated reactions (failures).
+ \item \strong{REACT} The total number of simulated reactions (failures).
  
- \item \strong{NON_REACT} is the total number of simulated non-reactions
+ \item \strong{NON_REACT} The total number of simulated non-reactions
   (successes).
   
- \item \strong{TRIALS} is the number of simulated trials performed until
-  failure condition met. If the failure condition was not met then this
-  value will always be equal to \strong{MAX_TRIALS}.
+ \item \strong{TRIALS} The number of simulated trials performed until
+  failure condition met.
   
- \item \strong{MAX_TRIALS} is the maximum number of simulated trials to
-  perform as specified (default is 20). \strong{TRIALS} will always be less
-  than or equal to \strong{MAX_TRIALS}.
+ \item \strong{MAX_TRIALS} The maximum number of simulated trials to
+  perform as specified.
   
- \item \strong{PCT_REACT} is the percent of simulated trials that yielded a
-  reaction (failure).
+ \item \strong{PCT_REACT} The the percent of simulated trials that yielded
+  a reaction (failure).
   
- \item \strong{Q} is the probability of failure (reaction) as specified.
+ \item \strong{Q} The probability of failure (reaction) as specified.
  
- \item \strong{P} is the probability of success (non-reaction).
+ \item \strong{P} The probability of success (non-reaction).
  
- \item \strong{RESULT} is whether the simulated test series as a whole
+ \item \strong{RESULT} Whether the simulated test series as a whole
   failed or passed based on the failure criteria specified.
 }
 }
@@ -65,6 +63,7 @@ consists of trials (drops).
 }
 \seealso{
 \code{\link{dtrials}}
+  \code{\link{droptest}}
 }
 \author{
 Chad Ross \email{chad.ross@gmail.com}

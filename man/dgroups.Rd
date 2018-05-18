@@ -8,49 +8,48 @@ dgroups(num.groups = NULL, probs = NULL, ...)
 }
 \arguments{
 \item{num.groups}{Integer. Specifies how many groups of drop tests to
-produce.}
+simulate.}
 
-\item{probs}{Vector. Specifies values of probabilities to be used when 
-Note: Vector length must equal value of num.groups.}
+\item{probs}{Vector. Specifies probabilities of q used for each group.
+Vector length must equal value of num.groups.}
 
 \item{...}{Passes values to \code{dseries}.}
 }
 \value{
 Data table of groups where each group consists of multiple drop
-  tests. \strong{Note:} Only data table is supported at this time.
-  
- Where:
- \strong{F_CRITERIA} is the failure criteria specified (default is 1).
+  tests. Consisting of the following elements:
+
+\itemize{  
+ \item \strong{F_CRITERIA} The failure criteria specified.
  
- \strong{REACT} is the total number of simulated reactions (failures).
+ \item \strong{REACT} The total number of simulated reactions (failures).
  
- \strong{NON_REACT} is the total number of simulated non-reactions
+ \item \strong{NON_REACT} The total number of simulated non-reactions
   (successes).
   
- \strong{TRIALS} is the number of simulated trials performed until failure 
-  condition met. If the failure condition was not met then this value
-  will always be equal to \strong{MAX_TRIALS}.
+ \item \strong{TRIALS} The number of simulated trials performed until
+ failure condition met.
   
- \strong{MAX_TRIALS} is the maximum number of simulated trials to perform
-  as specified (default is 20). \strong{TRIALS} will always be less than
-  or equal to \strong{MAX_TRIALS}.
+ \item \strong{MAX_TRIALS} The maximum number of simulated trials to
+  perform as specified.
   
- \strong{PCT_REACT} is the percent of simulated trials that yielded a
+ \item \strong{PCT_REACT} The percent of simulated trials that yielded a
   reaction (failure).
   
- \strong{Q} is the probability of failure (reaction) as specified.
+ \item \strong{Q} The probability of failure (reaction) as specified.
  
- \strong{P} is the probability of success (non-reaction).
+ \item \strong{P} The probability of success (non-reaction).
  
- \strong{RESULT} is whether the simulated test series as a whole failed
+ \item \strong{RESULT} Whether the simulated test series as a whole failed
   or passed based on the failure criteria specified.
   
- \strong{GROUP} denotes the group of simulated test series.
+ \item \strong{GROUP} Denotes the group of simulated test series.
+}
 }
 \description{
-\code{dgroups} returns a collection of multiple simulated test series. Each
-batch of test series are identified with a group number. Within each group
-test parameters will be identical.
+\code{dgroups} returns a collection test series organized into groups. Each
+batch of test series are identified with a group number. Test parameters
+will be uniform within each group.
 }
 \examples{
   dgroups(num.groups = 2, probs = c(0.01, 0.2), num.series = 5)
@@ -62,4 +61,8 @@ test parameters will be identical.
 \seealso{
 \code{\link{dseries}}
   \code{\link{dtrials}}
+  \code{\link{droptest}}
+}
+\author{
+Chad Ross \email{chad.ross@gmail.com}
 }
