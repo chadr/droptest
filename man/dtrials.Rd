@@ -15,53 +15,51 @@ of failure for the bernoulli trials. Probability of success would be
 
 \item{max.trials}{Integer. The maximum number of bernoulli trials to
 perform. where each trial represents one drop of the impactor onto
-a sample. The simulated test can only reach this number of trials if
-no reactions (failures) occur. In other words: trials performed will
-always be less than or equal to \code{max.trials}. Default is 20.}
+a sample. Trials performed will always be less than or equal to
+\code{max.trials}. Default is 20.}
 
 \item{fail.criteria}{Integer. Specifies number of reactions (failures)
 that can occur before an entire test is considered a failure. Default
 is 1.}
 
 \item{data.structure}{Instructs function to return result as a data.table
-or a list. Default is data.table. 
+or list. Default is data.table. 
 
 \strong{Note:} Other functions in this package only work with
 data.tables. List is an option strictly for future flexibility.}
 }
 \value{
-Result of simulation as a data table or list -- depending on value
-  of \code{data.structure}. 
+A data table or list. Containing the following elements:
   
-  Where:
-  
-   \strong{F_CRITERIA} is the failure criteria specified (default is 1).
+ \itemize{ 
+  \item \strong{F_CRITERIA} The failure criteria specified.
    
-   \strong{REACT} is the total number of simulated reactions (failures).
+  \item \strong{REACT} The total number of simulated reactions
+   (failures).
    
-   \strong{NON_REACT} is the total number of simulated non-reactions
+  \item \strong{NON_REACT} The total number of simulated non-reactions
     (successes).
     
-   \strong{TRIALS} is the number of simulated trials performed until failure 
-    condition met. If the failure condition was not met then this value
-    will always be equal to \strong{MAX_TRIALS}.
+  \item \strong{TRIALS} The number of simulated trials performed until
+    the failure condition was met.
+         
+   \item \strong{MAX_TRIALS} The maximum number of simulated trials
+    specified.
     
-   \strong{MAX_TRIALS} is the maximum number of simulated trials to perform
-    as specified (default is 20). \strong{TRIALS} will always be less than
-    or equal to \strong{MAX_TRIALS}.
+   \item \strong{PCT_REACT} The percent of simulated trials that yielded
+    a reaction (failure).
     
-   \strong{PCT_REACT} is the percent of simulated trials that yielded a
-    reaction (failure).
-    
-   \strong{Q} is the probability of failure (reaction) as specified.
+   \item \strong{Q} The probability of failure (reaction) as specified.
    
-   \strong{P} is the probability of success (non-reaction).
+   \item \strong{P} The probability of success (non-reaction).
    
-   \strong{RESULT} is whether the simulated test series as a whole failed
-    or passed based on the failure criteria specified.
+   \item \strong{RESULT} Whether the simulated test series as a whole
+   failed or passed based on the failure criteria specified.
+ }
 }
 \description{
-\code{dtrials} returns bernoulli trials that compose a drop test.
+\code{dtrials} returns simulated bernoulli trials (drops) that compose one
+  drop test.
 }
 \examples{
   dtrials(0.05)

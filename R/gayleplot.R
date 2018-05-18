@@ -17,6 +17,8 @@ gayleplot <- function(simq = seq(0.01, 0.5, by = 0.05), ...) {
   #'   trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.
   #' @param ... Passes values to \code{dgroups}.
   #'   
+  #' @return none   
+  #'   
   #' @examples
   #'   gayleplot(num.series = 100)
   #'   gayleplot(num.series = 100, simq = seq(0.01, 0.5, by = 0.01))

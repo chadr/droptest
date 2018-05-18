@@ -9,7 +9,9 @@ ratioplot <- function(simq = seq(0.01, 0.20, by=0.01),
   #'   trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.
   #' @param colors Vector. Passes color options to \code{barplot}.
   #' @param ... Passes values to \code{dgroups}.
-  #'   
+  #'
+  #' @return none   
+  #'         
   #' @examples
   #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100)
   #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100,
