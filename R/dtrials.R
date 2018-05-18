@@ -50,6 +50,8 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
   #'    failed or passed based on the failure criteria specified.
   #'  }
   #'  
+  #' @author Chad Ross \email{chad.ross@gmail.com}
+  #'  
   #' @examples 
   #'   dtrials(0.05)
   #'   dtrials(0.05, max.trials = 60)

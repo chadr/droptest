@@ -24,33 +24,34 @@ and \code{fail.criteria} to \code{dtrials}. All are optional except
 \value{
 Data table of multiple simulated drop tests. 
   Each row of the data.table represents one simulated drop test. 
-  \strong{Note:} Only data table is supported at this time.
+  Containing the following elements:
   
- Where:
- \strong{F_CRITERIA} is the failure criteria specified (default is 1).
+\itemize{  
+ \item \strong{F_CRITERIA} is the failure criteria specified (default is 1).
  
- \strong{REACT} is the total number of simulated reactions (failures).
+ \item \strong{REACT} is the total number of simulated reactions (failures).
  
- \strong{NON_REACT} is the total number of simulated non-reactions
+ \item \strong{NON_REACT} is the total number of simulated non-reactions
   (successes).
   
- \strong{TRIALS} is the number of simulated trials performed until failure 
-  condition met. If the failure condition was not met then this value
-  will always be equal to \strong{MAX_TRIALS}.
+ \item \strong{TRIALS} is the number of simulated trials performed until
+  failure condition met. If the failure condition was not met then this
+  value will always be equal to \strong{MAX_TRIALS}.
   
- \strong{MAX_TRIALS} is the maximum number of simulated trials to perform
-  as specified (default is 20). \strong{TRIALS} will always be less than
-  or equal to \strong{MAX_TRIALS}.
+ \item \strong{MAX_TRIALS} is the maximum number of simulated trials to
+  perform as specified (default is 20). \strong{TRIALS} will always be less
+  than or equal to \strong{MAX_TRIALS}.
   
- \strong{PCT_REACT} is the percent of simulated trials that yielded a
+ \item \strong{PCT_REACT} is the percent of simulated trials that yielded a
   reaction (failure).
   
- \strong{Q} is the probability of failure (reaction) as specified.
+ \item \strong{Q} is the probability of failure (reaction) as specified.
  
- \strong{P} is the probability of success (non-reaction).
+ \item \strong{P} is the probability of success (non-reaction).
  
- \strong{RESULT} is whether the simulated test series as a whole failed
-  or passed based on the failure criteria specified.
+ \item \strong{RESULT} is whether the simulated test series as a whole
+  failed or passed based on the failure criteria specified.
+}
 }
 \description{
 \code{dseries} returns a series of simulated drop tests. Where each test
@@ -64,4 +65,7 @@ consists of trials (drops).
 }
 \seealso{
 \code{\link{dtrials}}
+}
+\author{
+Chad Ross \email{chad.ross@gmail.com}
 }

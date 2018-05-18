@@ -72,3 +72,6 @@ A data table or list. Containing the following elements:
 \seealso{
 \code{\link{droptest}}
 }
+\author{
+Chad Ross \email{chad.ross@gmail.com}
+}
