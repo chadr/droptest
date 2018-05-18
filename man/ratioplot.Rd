@@ -14,6 +14,9 @@ trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.}
 
 \item{...}{Passes values to \code{dgroups}.}
 }
+\value{
+none
+}
 \description{
 \code{ratioplot} Creates a plot of pass/fail ratio for repeated test
  series, by simulated probability of reaction.

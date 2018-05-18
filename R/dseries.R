@@ -1,8 +1,8 @@
 dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #' Completes multiple series of simulated drop tests.
   #' 
-  #' \code{dseries} returns a series of simulated drops tests. Where each test
-  #' consists of independent drops (trials).
+  #' \code{dseries} returns a series of simulated drop tests. Where each test
+  #' consists of trials (drops).
   #'
   #' @param num.series Integer. Specifies how many series of drop tests to
   #'   simulate.

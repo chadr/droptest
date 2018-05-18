@@ -53,8 +53,8 @@ Data table of multiple simulated drop tests.
   or passed based on the failure criteria specified.
 }
 \description{
-\code{dseries} returns a series of simulated drops tests. Where each test
-consists of independent drops (trials).
+\code{dseries} returns a series of simulated drop tests. Where each test
+consists of trials (drops).
 }
 \examples{
   dseries(num.series = 5, q = 0.05)
