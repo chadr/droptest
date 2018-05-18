@@ -6,11 +6,14 @@
 \alias{droptest-package}
 \title{droptest: Simulates LOX/GOX drop testing.}
 \description{
-Provides seven functions. Generates simulated data representing the LOX/GOX
-drop testing process (Impact testing). Functions are provided to simulate 
-trials, test series, and groups of test series. Functions for creating plots
-specific to this testing method are also included. Test attributes and 
-criteria can be set arbitrarily.
+Generates simulated data representing the LOX/GOX drop testing
+process (also known as impact testing). Drop testing is expensive, time
+consuming, and notoriously difficult to analyze. A simulated process allows
+for accelerated study of test behavior.
+Functions are provided to simulate trials, test series, and groups of test
+series. Functions for creating plots specific to this process are also
+included. Test attributes and criteria can be set arbitrarily. This work is
+not endorsed by or affiliated with NASA.
 }
 \details{
 Drop testing -- sometimes called impact testing -- is used to evaluate if a
@@ -35,9 +38,6 @@ Simulation can be used to examine the behavior of this test procedure.
 Inspired by NASA Technical Note "Computer Simulation of Threshold Sensitivity
 Determinations" NASA-TN-D-7663. 1974.
 \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf}
-
-\strong{Note:} This work is not endorsed by or affiliated with NASA. Released
-under MIT license.
 }
 \references{
 Pass/Fail criteria and number of observations required have been defined in
