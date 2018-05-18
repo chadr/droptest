@@ -26,12 +26,12 @@ completes one test.
 While fundamentally a binomial process, drop testing -- performed by the
 military and NASA -- yields results that are difficult to analyze. Numerous
 tech briefs and standards have attempted to address the problem (see below
-for more information). Testing stops as soon as a failure condition is
-reached. If the failure condition occurs on drop one or two -- depending on
-the failure criteria -- then the test returns only one or two result values.
-Alternatively, if a material passes, or if the failure condition occurs on
-the last observation, then the test returns as many result values as 
-observations.
+for more information). Testing stops immediately once the failure condition
+is reached. If the failure condition occurs on drop one or two -- depending
+on the failure criteria -- then the test returns only one or two result
+values. Alternatively, if a material passes, or if the failure condition
+occurs on the last trial, then the test returns as many result values
+as trials.
 
 Simulation can be used to examine the behavior of this test procedure.
 
@@ -45,7 +45,7 @@ Determinations" (NASA-TN-D-7663). Gayle (1974).
 \itemize{
  \item \strong{Trial:} A simulated bernoulli trial that represents one drop
  of the impactor onto a material sample. Hence a trial is also referred to as
- a drop. Where q is the probability of a failure. A reaction is recorded as a
+ a drop. Where q is the probability of failure. A reaction is recorded as a
  failure. Where p is the probability of success. A non-reaction is recorded
  as a success. Where \eqn{p = 1 - q}.
  See \url{https://en.wikipedia.org/wiki/Bernoulli_trial}
@@ -53,10 +53,10 @@ Determinations" (NASA-TN-D-7663). Gayle (1974).
  \item \strong{Drop Test:} A collection of simulated trials (drops) generated
  with equal parameters (q, number of trials, failure criteria, etc). When the
  failure criteria is reached the test is immediately terminated and no more
- trials are completed. The sooner a test reaches the failure criteria results
- in less total trials for that particular test. A test that consists of no
- failures will always contain the maximum nuber of trials as defined in the
- function parameters.
+ trials are completed. The sooner a test reaches the failure criteria the
+ less total trials for that particular test. A test with no failures will
+ always contain the maximum number of trials as defined in the function
+ parameters.
 
  \item \strong{Test Series:} A collection of simulated drop tests. A group
  number can be attached to the drop tests in a test series (optional).

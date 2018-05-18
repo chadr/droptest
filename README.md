@@ -22,11 +22,11 @@ success. The specified number of trials -- until failure -- completes one test.
 While fundamentally a binomial process, drop testing -- performed by the
 military and NASA -- yields results that are difficult to analyze. Numerous tech
 briefs and standards have attempted to address the problem (see below for more
-information). Testing stops as soon as a failure condition is reached. If the
-failure condition occurs on drop one or two -- depending on the failure criteria
--- then the test returns only one or two result values. Alternatively, if
-a material passes, or if the failure condition occurs on the last observation,
-then the test returns as many result values as observations.
+information). Testing stops immediately once the failure condition is reached.
+If the failure condition occurs on drop one or two -- depending on the failure
+criteria -- then the test returns only one or two result values. Alternatively,
+if a material passes, or if the failure condition occurs on the last
+trial, then the test returns as many result values as trials.
 
 Simulation can be used to examine the behavior of this test procedure.
 
@@ -38,7 +38,7 @@ https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
 
 * **Trial:** A simulated bernoulli trial that represents one drop of the
   impactor onto a material sample. Hence a trial is also referred to as a drop.
-  Where q is the probability of a failure. A reaction is recorded as a failure.
+  Where q is the probability of failure. A reaction is recorded as a failure.
   Where p is the probability of success. A non-reaction is recorded as a
   success. Where ```p = 1 - q```. See https://en.wikipedia.org/wiki/Bernoulli_trial
  
@@ -46,16 +46,15 @@ https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
   parameters (q, number of trials, failure criteria, etc). When the failure
   criteria is reached the test is immediately terminated and no more trials are
   completed. The sooner a test reaches the failure criteria the less total
-  trials for that particular test. A test that consists of no failures will
-  always contain the maximum number of trials as defined in the function
-  parameters.
+  trials for that particular test. A test with no failures will always contain
+  the maximum number of trials as defined in the function parameters.
  
 * **Test Series:** A collection of simulated drop tests. A group number can be
   attached to the drop tests in a test series (optional).
  
-*  **Groups:** A collection of multiple simulated test series. Each batch of test
-  series are identified with a group number. Within each group test parameters
-  will be identical.
+*  **Groups:** A collection of multiple simulated test series. Each batch of
+  test series are identified with a group number. Within each group test
+  parameters will be identical.
  
 * **Trial Deviation:** The average distance from q for the total percent of
   reactions (failures).
@@ -87,4 +86,4 @@ Frye, Stohler (1980).
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf
 
 **Note:** This work is not endorsed by or affiliated with NASA. Released under
-MIT license. See: https://github.com/chadr/droptest/blob/master/MIT_LICENSE
+MIT license.

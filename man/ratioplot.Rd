@@ -10,7 +10,8 @@ ratioplot(simq = seq(0.01, 0.2, by = 0.01), colors = c("RED", "GREEN"), ...)
 \item{simq}{Vector. Probabilities of failure (q) to use for simulated
 trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.}
 
-\item{colors}{Vector. Passes color options to \code{barplot}.}
+\item{colors}{Vector. Passes color options to \code{barplot}. Defaults to
+red and green.}
 
 \item{...}{Passes values to \code{dgroups}.}
 }

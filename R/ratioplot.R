@@ -7,7 +7,8 @@ ratioplot <- function(simq = seq(0.01, 0.20, by=0.01),
   #' 
   #' @param simq Vector. Probabilities of failure (q) to use for simulated
   #'   trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.
-  #' @param colors Vector. Passes color options to \code{barplot}.
+  #' @param colors Vector. Passes color options to \code{barplot}. Defaults to
+  #'   red and green.
   #' @param ... Passes values to \code{dgroups}.
   #'
   #' @return none   

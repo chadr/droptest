@@ -19,8 +19,8 @@ a sample. Trials performed will always be less than or equal to
 \code{max.trials}. Default is 20.}
 
 \item{fail.criteria}{Integer. Specifies number of reactions (failures)
-that can occur before an entire test is considered a failure. Default
-is 1.}
+that can occur before an entire test is considered a failure. Must be 
+less than or equal to \code{max.trials}. Default is 1.}
 
 \item{data.structure}{Instructs function to return result as a data.table
 or list. Default is data.table. 
