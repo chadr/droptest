@@ -12,7 +12,6 @@ To get the current development version from github:
 # install.packages("devtools")
 devtools::install_github("chadr/droptest")
 ```
-### Examples and documentation
 
 ### Background information:
 
@@ -38,12 +37,12 @@ Inspired by NASA Technical Note "Computer Simulation of Threshold Sensitivity
 Determinations" (NASA-TN-D-7663). 1974.
 https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
 
-### Definitions
+### Definitions:
 
 * **Trial:** A simulated bernoulli trial that represents one drop of the impactor
   onto a material sample. q is the probability of a failure. A reaction is
   recorded as a failure. p is the probability of success. A non-reaction is
-  recorded as a success. Where \eqn{p = 1 - q}.
+  recorded as a success. Where ```p = 1 - q```.
  
 * **Drop Test:** A collection of simulated trials generated with equal parameters
   (q, number of trials, failure criteria, etc). When the failute criteria is
@@ -62,7 +61,7 @@ https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19750004618.pdf
 * **Trial Deviation:** The average distance from q for the total percent of
   reactions (failures).
 
-### Applicable Standards
+### Applicable Standards:
 
 Pass/Fail criteria and number of observations required have been defined in the
 following standards:
