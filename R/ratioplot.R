@@ -1,9 +1,9 @@
 ratioplot <- function(simq = seq(0.01, 0.20, by=0.01),
                       colors = c("RED", "GREEN"), ...) {
-  #' Creates a plot of pass/fail ratio for repeated test series.
+  #' Creates plot of pass/fail ratio for repeated test series.
   #' 
-  #' \code{ratioplot} Creates a plot of pass/fail ratio for repeated test
-  #'  series, by simulated probability of reaction.
+  #' \code{ratioplot} Creates plot of pass/fail ratio for repeated test
+  #'  series. By simulated probability of reaction.
   #' 
   #' @param simq Vector. Probabilities of failure (q) to use for simulated
   #'   trials. Defaults to range of q = 0.01 to q = 0.5 in 0.05 steps.
@@ -13,15 +13,19 @@ ratioplot <- function(simq = seq(0.01, 0.20, by=0.01),
   #' @return none   
   #'         
   #' @examples
+  #'  # recommended to use num.series value greater than or equal to 1000.
   #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100)
   #'  ratioplot(simq = seq(0.01, 0.20, by = 0.01), num.series = 100,
   #'            colors = c("BLUE", "BLACK"))
+  #'            
+  #' @author Chad Ross \email{chad.ross@gmail.com}
   #'   
   #' @seealso 
   #'   \code{\link{dgroups}} 
   #'   \code{\link{dseries}}
   #'   \code{\link{dtrials}}
-  
+  #'   \code{\link{droptest}}
+  #'   
   # get pass through args
   passed <- list(...)
   
