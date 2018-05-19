@@ -1,5 +1,5 @@
 Package: droptest
-Title: Simulates LOX/GOX Drop Testing (impact testing)
+Title: Simulates LOX/GOX Drop Testing (Impact Testing)
 Version: 0.1.0
 Authors@R: person("Chad", "Ross", email = "chad.ross@gmail.com",
     role = c("aut", "cre"))
