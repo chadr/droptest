@@ -103,8 +103,7 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
                               Q = q,
                               P = 1 - q,
                               RESULT = ifelse(reactions >= fail.criteria,
-                                              "FAIL", "PASS"),
-                              stringsAsFactors = FALSE)
+                                              "FAIL", "PASS"))
   } 
 
   if (data.structure == "list") {

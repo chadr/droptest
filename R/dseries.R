@@ -55,19 +55,20 @@ dseries <- function(num.series, tag.group = FALSE, group = 0, ...) {
   #'   \code{\link{dtrials}}
   #'   \code{\link{droptest}}
 
-  # NULL object to prepare for rbinds
-  tests <- data.table(NULL)
-
-  # generate data.table
+  # vector to hold series
+  my.list <- vector('list', num.series)
+  
+  # generate a batch of drop tests
   for (i in 1:num.series) {
-    # generate a batch of drop tests
-    tests <- rbind(tests, dtrials(data.structure = "data.table", ...))
+    my.list[[i]] <- dtrials(data.structure = "data.table", ...)
   }
-
+  
+  results <- do.call("rbind", my.list)
+  
   if (tag.group == TRUE) {
     # assign group
-    tests$GROUP <- group
+    results$GROUP <- group
   }
-
-  return(tests)
-}
+  
+  return(results)
+  }
