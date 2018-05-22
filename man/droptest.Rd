@@ -4,24 +4,24 @@
 \name{droptest}
 \alias{droptest}
 \alias{droptest-package}
-\title{droptest: Simulates LOX/GOX drop testing.}
+\title{droptest: Simulates LOX drop testing.}
 \description{
-Generates simulated data representing the LOX/GOX drop testing
+Generates simulated data representing the LOX drop testing
 process (also known as impact testing). Drop testing is expensive, time
 consuming, and notoriously difficult to analyze. A simulated process allows
 for accelerated study of test behavior.
+}
+\details{
 Functions are provided to simulate trials, test series, and groups of test
 series. Functions for creating plots specific to this process are also
 included. Test attributes and criteria can be set arbitrarily. This work is
 not endorsed by or affiliated with NASA.
-}
-\details{
+
 Drop testing -- sometimes called impact testing -- is used to evaluate if a
-material will interact with liquid (LOX) or gaseous oxygen (GOX). The
-material is exposed to the LOX/GOX and an impactor is dropped onto the
-sample. Each drop is a bernoulli trial where a reaction is a failure and a
-non-reaction is a success. The specified number of trials -- until failure --
-completes one test.
+material will interact with liquid oxygen (LOX). The material is exposed to
+the LOX and an impactor is dropped onto the sample. Each drop is a bernoulli 
+trial where a reaction is a failure and a non-reaction is a success. The
+specified number of trials -- until failure -- completes one test.
 
 While fundamentally a binomial process, drop testing -- performed by the
 military and NASA -- yields results that are difficult to analyze. Numerous
