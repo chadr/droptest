@@ -1,11 +1,12 @@
 # droptest
 
-An R package for simulating LOX/GOX drop testing.
+An R package for simulating LOX drop testing.
 
 ### Introduction:
 
 Generates simulated data representing the LOX drop testing process (also known
-as impact testing). A simulated process allows for accelerated study of test
+as impact testing). Drop testing is expensive, time consuming, and notoriously
+difficult to analyze. A simulated process allows for accelerated study of test
 behavior. Functions are provided to simulate trials, test series, and groups of
 test series. Functions for creating plots specific to this process are also
 included. Test attributes and criteria can be set arbitrarily.

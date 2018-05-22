@@ -67,22 +67,24 @@ dgroups <- function(num.groups = NULL, probs = NULL, ...) {
     stop("Must specify probabilities for groups.")
   }
 
-  groups <- data.table(NULL)
+  #groups <- data.table(NULL)
 
+  my.list <- vector("list", num.groups)
+  
   for(i in 1:num.groups) {
     # fixed probability for each group
     if (length(probs) == 1) {
       # generate several groups of drop tests
-      groups <- rbind(groups, dseries(tag.group = TRUE, group = i,
-                      ...))
+      my.list[[i]] <- dseries(tag.group = TRUE, group = i, ...)
     }
     # varying probability by group
     if (length(probs) > 1) {
       # generate several groups of drop tests
-      groups <- rbind(groups, dseries(tag.group = TRUE, q = probs[[i]],
-                      group = i, ...))
-      }
+      my.list[[i]] <- dseries(tag.group = TRUE, q = probs[[i]], group = i, ...)
+    }
   }
     
-  return(groups)
+  results <- do.call("rbind", my.list)
+  
+  return(results)
 }
