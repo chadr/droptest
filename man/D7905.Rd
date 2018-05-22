@@ -1,10 +1,10 @@
 \name{D7905}
 \alias{D7905}
 \docType{data}
-\title{Historical Non-Truncated Data}
+\title{Historical Data}
 \description{
-Historical drop test data that was not truncated by the testers. Useful for
-comparing to modern truncated test methods and simulation output.
+Historical drop test data where testers did not immediately terminate testing.
+Useful for comparing modern test methods and simulation output.
 }
 \usage{data("D7905")}
 \format{
