@@ -100,6 +100,9 @@ For more information on drop testing:
  Bryan, Frye, Stohler (1980).
  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
 }
+
+\strong{Note:} This work is not endorsed by or affiliated with NASA. Released
+under MIT license.
 }
 \seealso{
 \code{\link{dtrials}}
