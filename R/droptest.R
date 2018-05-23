@@ -92,6 +92,9 @@
 #'  \url{https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19800006920.pdf}
 #' }
 #' 
+#' \strong{Note:} This work is not endorsed by or affiliated with NASA. Released
+#' under MIT license.
+#' 
 #' @author Chad Ross \email{chad.ross@gmail.com}
 #' 
 #' @seealso 
