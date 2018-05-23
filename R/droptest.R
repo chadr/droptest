@@ -101,6 +101,8 @@
 #'  \code{\link{trialdev}}
 #'  \code{\link{gayleplot}}
 #'  \code{\link{ratioplot}}
+#'  \code{\link{D7905}}
+#'  \code{\link{PREGENTD}}
 #' 
 #' @section Package source
 #'  \url{https://github.com/chadr/droptest}

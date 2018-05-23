@@ -108,6 +108,8 @@ For more information on drop testing:
  \code{\link{trialdev}}
  \code{\link{gayleplot}}
  \code{\link{ratioplot}}
+ \code{\link{D7905}}
+ \code{\link{PREGENTD}}
 }
 \author{
 Chad Ross \email{chad.ross@gmail.com}
