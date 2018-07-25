@@ -3,7 +3,7 @@
 
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-![CRAN](https://img.shields.io/cran/v/devtools.svg)
+![CRAN](http://www.r-pkg.org/badges/version/droptest)
 
 [![](https://cranlogs.r-pkg.org/badges/grand-total/droptest)](https://cran.r-project.org/package=droptest)
 
