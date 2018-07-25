@@ -1,11 +1,7 @@
 # droptest
 
 
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
-
-![CRAN](http://www.r-pkg.org/badges/version/droptest)
-
-[![](https://cranlogs.r-pkg.org/badges/grand-total/droptest)](https://cran.r-project.org/package=droptest)
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg) ![CRAN](http://www.r-pkg.org/badges/version/droptest) [![](https://cranlogs.r-pkg.org/badges/grand-total/droptest)](https://cran.r-project.org/package=droptest)
 
 An R package for simulating LOX drop testing.
 
