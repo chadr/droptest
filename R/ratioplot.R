@@ -32,7 +32,7 @@ ratioplot <- function(simq = seq(0.01, 0.20, by=0.01),
   
   # generate simulated test data
   sim.data <- dgroups(probs = simq, ...)
-  # convert p to percent
+  # convert q to percent
   sim.data$Q <- sim.data$Q * 100
     
   # collect frequencies into table
