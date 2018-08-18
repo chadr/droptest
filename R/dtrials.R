@@ -108,7 +108,8 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
 
   if (data.structure == "list") {
     #build list
-    test.return <- list(F_CRITERIA = fail.criteria,
+    test.return <- list(RAW_VALUES = results,
+                        F_CRITERIA = fail.criteria,
                         REACT = reactions,
                         NON_REACT = non.reactions,
                         TRIALS = reactions + non.reactions,

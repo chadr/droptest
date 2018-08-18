@@ -1,3 +1,6 @@
+## Version 0.1.2 (August 18th, 2018)
+  * Added ability to see raw, uncensored trial data.
+
 ## Version 0.1.1 (May 23rd, 2018)
   * Documentation updated.
   * Simulation time decreased by ~90%.
