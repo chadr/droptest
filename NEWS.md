@@ -1,3 +1,6 @@
+## Version 0.1.3 (August 20th, 2018)
+  * Fixed logic error in simulation when failure occurs on first trial.
+
 ## Version 0.1.2 (August 18th, 2018)
   * Added ability to see raw, uncensored trial data.
 

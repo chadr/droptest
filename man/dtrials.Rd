@@ -31,8 +31,10 @@ data.tables. List is an option strictly for future flexibility.}
 \value{
 A data table or list. Containing the following elements:
   
- \itemize{ 
-  \item \strong{RAW_VALUES} The raw, uncensored trial results. (Only in list output.)
+ \itemize{
+  \item \strong{RAW_VALUES} The raw, uncensored trial results.
+   (Only in list output.)
+ 
   \item \strong{F_CRITERIA} The failure criteria specified.
    
   \item \strong{REACT} The total number of simulated reactions

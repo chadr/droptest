@@ -85,7 +85,7 @@ dtrials <- function(q, max.trials = 20, fail.criteria = 1,
   } else {
     # count number of reactions and non-reactions
     reactions <- sum(results[0:index])
-    non.reactions <- index    
+    non.reactions <- index - fail.criteria 
 
     if (index == 20) {
       non.reactions = non.reactions - 1
